@@ -10,7 +10,7 @@ class Orbis_Deals_Plugin extends Orbis_Plugin {
 		$this->set_db_version( '1.0.0' );
 
 		$this->plugin_include( 'includes/post.php' );
-//		$this->plugin_include( 'includes/shortcodes.php' );
+		$this->plugin_include( 'includes/shortcodes.php' );
 
 		orbis_register_table( 'orbis_deals' );
 	}
