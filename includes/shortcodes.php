@@ -22,19 +22,24 @@ function orbis_deals_shortcode_orbis_deals( $attributes ) {
 		$statuses = array( $attributes['status'] );
 	}
 
+	// Implemented through the call_user_func_array method to be able to pass the array of statuses
 	$query = call_user_func_array( array( $wpdb, 'prepare' ), array_merge(
         array(
 	        "
 	        SELECT
 	            d.id,
+	            p.post_title AS title,
 	            d.price,
 	            d.status,
 	            c.name AS company_name
 			FROM
 				$wpdb->orbis_deals AS d
+					JOIN
+				$wpdb->posts AS p
+						ON d.post_id = p.ID
 					LEFT JOIN
 				$wpdb->orbis_companies AS c
-					ON d.company_id = c.id
+						ON d.company_id = c.id
 			WHERE
 				d.status IN ( %d" . str_repeat( ', %d', count( $statuses ) - 1 ) . " )
 		    "
@@ -42,8 +47,9 @@ function orbis_deals_shortcode_orbis_deals( $attributes ) {
 		$statuses
 	) );
 
-	$data          = new stdClass();
-	$data->results = $wpdb->get_results( $query );
+	$data           = new stdClass();
+	$data->results  = $wpdb->get_results( $query );
+	$data->statuses = orbis_deal_get_statuses();
 
 	ob_start();
 
