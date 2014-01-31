@@ -13,6 +13,7 @@ class Orbis_Deals_Plugin extends Orbis_Plugin {
 		$this->plugin_include( 'includes/shortcodes.php' );
 		$this->plugin_include( 'includes/deal.php' );
 		$this->plugin_include( 'includes/deal-template.php' );
+		$this->plugin_include( 'includes/template.php' );
 
 		orbis_register_table( 'orbis_deals' );
 	}
