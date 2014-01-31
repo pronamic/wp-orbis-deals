@@ -6,6 +6,7 @@
  * @return null|string $company_name
  */
 function orbis_deal_get_the_company_name() {
+
 	global $post;
 
 	$company_name = null;
@@ -21,6 +22,7 @@ function orbis_deal_get_the_company_name() {
  * Echo the company name.
  */
 function orbis_deal_the_company_name() {
+
 	echo esc_attr( orbis_deal_get_the_company_name() );
 }
 
@@ -30,6 +32,7 @@ function orbis_deal_the_company_name() {
  * @return null|string $price
  */
 function orbis_deal_get_the_price() {
+
 	global $post;
 
 	$price = null;
@@ -45,18 +48,20 @@ function orbis_deal_get_the_price() {
  * Echo the price.
  */
 function orbis_deal_the_price() {
+
 	echo orbis_price( orbis_deal_get_the_price() );
 }
 
 /**
- * Return the status. If $get_as_text is set to true, the status will be returned as true. Otherwise the status ID is
+ * Return the status. If $get_as_key is set to true, the status will be returned as key. Otherwise the status' value is
  * returned.
  *
- * @param bool $get_as_text (optional, defaults to true)
+ * @param bool $get_as_key (optional, defaults to false)
  *
- * @return null|int|string $status
+ * @return null|string $status
  */
-function orbis_deal_get_the_status( $get_as_text = true ) {
+function orbis_deal_get_the_status( $get_as_key = false ) {
+
 	global $post;
 
 	$status = null;
@@ -64,7 +69,7 @@ function orbis_deal_get_the_status( $get_as_text = true ) {
 	if ( isset( $post->deal_status ) ) {
 		$status = $post->deal_status;
 
-		if ( $get_as_text ) {
+		if ( ! $get_as_key ) {
 			$status = orbis_deal_get_statuses()[ $status ];
 		}
 	}
@@ -75,8 +80,11 @@ function orbis_deal_get_the_status( $get_as_text = true ) {
 /**
  * Echo the status.
  *
- * @see orbis_deal_get_the_status( $get_as_text = true )
+ * @see orbis_deal_get_the_status( $get_as_key = false )
+ *
+ * @param bool $get_as_key
  */
-function orbis_deal_the_status( $get_as_text = true ) {
-	echo esc_attr( orbis_deal_get_the_status( $get_as_text ) );
+function orbis_deal_the_status( $get_as_key = false ) {
+
+	echo esc_attr( orbis_deal_get_the_status( $get_as_key ) );
 }

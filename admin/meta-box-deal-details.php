@@ -50,7 +50,7 @@ if ( $deal ) {
 
 				<?php foreach ( orbis_deal_get_statuses() as $status_key => $status_value ) : ?>
 
-				<option value="0" <?php selected( $status_key, $status ); ?>><?php echo $status_value; ?></option>
+				<option value="<?php echo $status_key; ?>" <?php selected( $status_key, $status ); ?>><?php echo $status_value; ?></option>
 
 				<?php endforeach ?>
 

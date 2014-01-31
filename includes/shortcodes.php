@@ -18,8 +18,27 @@ function orbis_deals_shortcode_orbis_deals( $attributes ) {
 	$available_statuses = array_keys( orbis_deal_get_statuses() );
 	$statuses           = $available_statuses;
 
-	if ( isset( $attributes['status'] ) && in_array( $attributes['status'], $available_statuses ) ) {
-		$statuses = array( $attributes['status'] );
+	// Get status attribute if it is set
+	if ( isset( $attributes['status'] ) && strlen( $attributes['status'] ) > 0 ) {
+
+		// A comma separated list of status attributes should be converted to an array which matches the available statuses array
+		if ( strpos( $attributes['status'], ',' ) !== false ) {
+
+			$statuses = explode( ',', $attributes['status'] );
+
+			foreach ( $statuses as $status_i => $status ) {
+
+				if ( ! in_array( $status, $available_statuses ) ) {
+
+					unset( $statuses[ $status_i ] );
+				}
+			}
+
+		// A single status should be in an array as well
+		} else if ( in_array( $attributes['status'], $available_statuses ) ) {
+
+			$statuses = array( $attributes['status'] );
+		}
 	}
 
 	// Implemented through the call_user_func_array method to be able to pass the array of statuses
@@ -41,7 +60,7 @@ function orbis_deals_shortcode_orbis_deals( $attributes ) {
 				$wpdb->orbis_companies AS c
 						ON d.company_id = c.id
 			WHERE
-				d.status IN ( %d" . str_repeat( ', %d', count( $statuses ) - 1 ) . " )
+				d.status IN ( %s" . str_repeat( ', %s', count( $statuses ) - 1 ) . " )
 		    "
         ),
 		$statuses

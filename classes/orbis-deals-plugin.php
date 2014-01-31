@@ -29,7 +29,7 @@ class Orbis_Deals_Plugin extends Orbis_Plugin {
 			company_id BIGINT(16) UNSIGNED DEFAULT NULL,
 			post_id BIGINT(20) UNSIGNED DEFAULT NULL,
 			price FLOAT NULL,
-			status TINYINT(1) DEFAULT 0,
+			status VARCHAR(16) NOT NULL DEFAULT "pending",
 			PRIMARY KEY  (id),
 			UNIQUE KEY post_id (post_id),
 			KEY company_id (company_id)

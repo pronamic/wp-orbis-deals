@@ -36,8 +36,16 @@ function orbis_deals_posts_clauses( $pieces, $query ) {
 					ON deal.company_id = company.id
 		";
 
+		$status = filter_input( INPUT_GET, 'orbis_deal_status', FILTER_SANITIZE_STRING );
+
 		// Where
-		$where = '';
+		$where = $wpdb->prepare(
+			"
+				AND
+			deal.status = %s
+			",
+			$status
+		);
 
 		$pieces['join']   .= $join;
 		$pieces['fields'] .= $fields;

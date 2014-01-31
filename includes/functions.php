@@ -56,9 +56,9 @@ if ( ! function_exists( 'orbis_deal_get_statuses') ) {
 	function orbis_deal_get_statuses() {
 
 		return array(
-			0 => __( 'Pending', 'orbis_deals' ),
-			1 => __( 'Won'    , 'orbis_deals' ),
-			2 => __( 'Lost'   , 'orbis_deals' ),
+			'pending' => __( 'Pending', 'orbis_deals' ),
+			'won'     => __( 'Won'    , 'orbis_deals' ),
+			'lost'    => __( 'Lost'   , 'orbis_deals' ),
 		);
 	}
 }
