@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis Deals\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/orbis-subscriptions\n"
-"POT-Creation-Date: 2014-01-31 14:10+0100\n"
-"PO-Revision-Date: 2014-01-31 14:12+0100\n"
+"POT-Creation-Date: 2014-01-31 15:19+0100\n"
+"PO-Revision-Date: 2014-01-31 15:19+0100\n"
 "Last-Translator: \n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -31,12 +31,12 @@ msgid "Select Company"
 msgstr "Selecteer Bedrijf"
 
 #: admin/meta-box-deal-details.php:38 includes/post.php:208
-#: templates/deals.php:10
+#: templates/deal-details.php:28 templates/deals.php:10
 msgid "Price"
 msgstr "Prijs"
 
 #: admin/meta-box-deal-details.php:46 includes/post.php:209
-#: templates/deals.php:11
+#: templates/deal-details.php:33 templates/deals.php:11
 msgid "Status"
 msgstr "Status"
 
@@ -107,11 +107,11 @@ msgctxt "slug"
 msgid "deals"
 msgstr "offertes"
 
-#: includes/post.php:47
+#: includes/post.php:47 templates/deal-details.php:18
 msgid "Deal Details"
 msgstr "Offerte Details"
 
-#: includes/post.php:207 templates/deals.php:9
+#: includes/post.php:207 templates/deal-details.php:23 templates/deals.php:9
 msgid "Company"
 msgstr "Bedrijf"
 
