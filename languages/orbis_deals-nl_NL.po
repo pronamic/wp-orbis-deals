@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis Deals\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/orbis-subscriptions\n"
-"POT-Creation-Date: 2014-01-30 14:09+0100\n"
-"PO-Revision-Date: 2014-01-30 14:09+0100\n"
+"POT-Creation-Date: 2014-01-31 14:10+0100\n"
+"PO-Revision-Date: 2014-01-31 14:12+0100\n"
 "Last-Translator: \n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -17,7 +17,8 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/meta-box-deal-details.php:22 includes/post.php:546
+#: admin/meta-box-deal-details.php:22 includes/post.php:210
+#: templates/deals.php:7
 msgid "Orbis ID"
 msgstr "Orbis ID"
 
@@ -27,262 +28,273 @@ msgstr "Bedrijf ID"
 
 #: admin/meta-box-deal-details.php:33
 msgid "Select Company"
-msgstr "Selecteer bedrijf"
+msgstr "Selecteer Bedrijf"
 
-#: admin/meta-box-deal-details.php:38 includes/post.php:543
+#: admin/meta-box-deal-details.php:38 includes/post.php:208
+#: templates/deals.php:10
 msgid "Price"
 msgstr "Prijs"
 
-#: admin/meta-box-deal-details.php:46
+#: admin/meta-box-deal-details.php:46 includes/post.php:209
+#: templates/deals.php:11
 msgid "Status"
 msgstr "Status"
 
-#: classes/orbis-subscription.php:346
-msgid "j F, Y @ G:i:s"
-msgstr "j F Y @ H:i"
+#: includes/functions.php:59
+msgid "Pending"
+msgstr "In afwachting"
 
-#: classes/orbis-subscription.php:565
-#, php-format
-msgid "A license expiration reminder has been sent to %s (%s)."
-msgstr "Een licentie verval herinnering werd verstuurd naar %s (%s)."
+#: includes/functions.php:60
+msgid "Won"
+msgstr "Gewonnen"
 
-#: classes/orbis-subscriptions-expiration.php:13
-msgid "Orbis Expiring Subscriptions"
-msgstr "Orbis aflopende abonnementen"
+#: includes/functions.php:61
+msgid "Lost"
+msgstr "Verloren"
 
-#: classes/orbis-subscriptions-expiration.php:14
-msgid "Expiring Subscriptions"
-msgstr "Aflopende abonnementen"
-
-#: classes/orbis-subscriptions-expiration.php:22
-msgid "Orbis Sent Reminders"
-msgstr "Orbis verzonden herinneringen"
-
-#: classes/orbis-subscriptions-expiration.php:23
-msgid "Sent Reminders"
-msgstr "Verzonden herinneringen"
-
-#: classes/orbis-subscriptions-settings.php:14
-msgid "Reminder"
-msgstr "Herinnering"
-
-#: classes/orbis-subscriptions-settings.php:21
-msgid "URL"
-msgstr "URL"
-
-#: classes/orbis-subscriptions-settings.php:30
-msgid "Subject"
-msgstr "Onderwerp"
-
-#: classes/orbis-subscriptions-settings.php:39
-msgid "Template"
-msgstr "Sjabloon"
-
-#: classes/orbis-subscriptions-settings.php:55
-msgid "Orbis Subscriptions Settings"
-msgstr "Orbis abonnementen instellingen"
-
-#: classes/orbis-subscriptions-settings.php:56
-msgid "Settings"
-msgstr "Instellingen"
-
-#: classes/orbis-subscriptions-settings.php:64
-msgid "Orbis Subscriptions Statistics"
-msgstr "Orbis abonnementen statistieken"
-
-#: classes/orbis-subscriptions-settings.php:65
-msgid "Statistics"
-msgstr "Statistieken"
-
-#: includes/comment.php:19
-#, php-format
-msgid ""
-"This comment was an subscription extend request (before: %s, after: %s)."
-msgstr "Deze reactie was een abonnement verleng verzoek (voor: %s, na: %s)."
-
-#: includes/functions.php:81
-#, php-format
-msgid "I sent the following message to %s: <blockquote>%s</blockquote>"
-msgstr ""
-"Ik heb het volgende bericht verstuurd aan %s: <blockquote>%s</blockquote>"
-
-#: includes/post.php:9 includes/post.php:22 includes/template.php:62
-msgid "Subscriptions"
-msgstr "Abonnementen"
-
-#: includes/post.php:11
-msgctxt "post type general name"
-msgid "Subscriptions"
-msgstr "Abonnementen"
-
-#: includes/post.php:12
-msgctxt "post type singular name"
-msgid "Subscription"
-msgstr "Abonnement"
+#: includes/post.php:11 includes/post.php:24
+msgid "Deals"
+msgstr "Offertes"
 
 #: includes/post.php:13
-msgctxt "orbis_subscription"
-msgid "Add New"
-msgstr "Nieuwe abonnement"
+msgctxt "post type general name"
+msgid "Deals"
+msgstr "Offertes"
 
 #: includes/post.php:14
-msgid "Add New Subscription"
-msgstr "Nieuwe abonnement toevoegen"
+msgctxt "post type singular name"
+msgid "Deal"
+msgstr "Offerte"
 
 #: includes/post.php:15
-msgid "Edit Subscription"
-msgstr "Bewerk abonnement"
+msgid "Add New"
+msgstr "Nieuwe Toevoegen"
 
 #: includes/post.php:16
-msgid "New Subscription"
-msgstr "Nieuwe abonnement"
+msgid "Add New Deal"
+msgstr "Nieuwe Offerte Maken"
 
 #: includes/post.php:17
-msgid "View Subscription"
-msgstr "Bekijk abonnement"
+msgid "Edit Deal"
+msgstr "Bewerk Offerte"
 
 #: includes/post.php:18
-msgid "Search Subscriptions"
-msgstr "Abonnementen zoeken"
+msgid "New Deal"
+msgstr "Nieuwe Offerte"
 
 #: includes/post.php:19
-msgid "No subscriptions found"
-msgstr "Geen abonnementen gevonden"
+msgid "View Deal"
+msgstr "Bekijk Offerte"
 
 #: includes/post.php:20
-msgid "No subscriptions found in Trash"
-msgstr "Geen abonnementen gevonden in prullenbak"
+msgid "Search Deals"
+msgstr "Zoek Offertes"
 
 #: includes/post.php:21
-msgid "Parent Subscription:"
-msgstr "Bovenliggend abonnement"
+msgid "No deals found"
+msgstr "Geen offertes gevonden"
 
-#: includes/post.php:30
+#: includes/post.php:22
+msgid "No deals found in Trash"
+msgstr "Geen offertes gevonden in de prullenbak"
+
+#: includes/post.php:23
+msgid "Parent Deals:"
+msgstr "Bovenliggende Offerte:"
+
+#: includes/post.php:32
 msgctxt "slug"
-msgid "subscriptions"
-msgstr "abonnementen"
-
-#: includes/post.php:38
-msgid "Subscription Products"
-msgstr "Abonnement producten"
-
-#: includes/post.php:40
-msgctxt "post type general name"
-msgid "Subscription Products"
-msgstr "Abonnement producten"
-
-#: includes/post.php:41
-msgctxt "post type singular name"
-msgid "Subscription Product"
-msgstr "Abonnement product"
-
-#: includes/post.php:42
-msgctxt "orbis_subs_type"
-msgid "Add New"
-msgstr "Nieuw abonnement product"
-
-#: includes/post.php:43
-msgid "Add New Subscription Product"
-msgstr "Nieuwe abonnement product toevoegen"
-
-#: includes/post.php:44
-msgid "Edit Subscription Product"
-msgstr "Bewerk abonnement product"
-
-#: includes/post.php:45
-msgid "New Subscription Product"
-msgstr "Nieuwe abonnement product"
-
-#: includes/post.php:46
-msgid "View Subscription Product"
-msgstr "Bekijk abonnement product"
+msgid "deals"
+msgstr "offertes"
 
 #: includes/post.php:47
-msgid "Search Subscription Products"
-msgstr "Zoeken abonnement producten"
+msgid "Deal Details"
+msgstr "Offerte Details"
 
-#: includes/post.php:48
-msgid "No subscription products found"
-msgstr "Geen abonnement producten gevonden"
+#: includes/post.php:207 templates/deals.php:9
+msgid "Company"
+msgstr "Bedrijf"
 
-#: includes/post.php:49
-msgid "No subscription products found in Trash"
-msgstr "Geen abonnement producten gevonden in prullenbak"
-
-#: includes/post.php:50
-msgid "Parent Subscription Product:"
-msgstr "Bovenliggend abonnement product:"
-
-#: includes/post.php:51
-msgid "Products"
-msgstr "Producten"
-
-#: includes/post.php:59
-msgctxt "slug"
-msgid "subscription-products"
-msgstr "abonnement-producten"
-
-#: includes/post.php:73
-msgid "Subscription Details"
-msgstr "Abonnement details"
-
-#: includes/post.php:82
-msgid "Subscription Product Details"
-msgstr "Abonnement product details"
-
-#: includes/post.php:287
-#, php-format
-msgid "I extended this subscription: <blockquote>%s</blockquote>"
-msgstr "Ik heb dit abonnement verlengd: <blockquote>%s</blockquote>"
-
-#: includes/post.php:337 includes/post.php:542
+#: templates/deals.php:8
 msgid "Title"
 msgstr "Titel"
 
-#: includes/post.php:338
-msgid "Person"
-msgstr "Persoon"
+#~ msgid "j F, Y @ G:i:s"
+#~ msgstr "j F Y @ H:i"
 
-#: includes/post.php:339 includes/post.php:547
-msgid "Author"
-msgstr "Auteur"
+#~ msgid "A license expiration reminder has been sent to %s (%s)."
+#~ msgstr "Een licentie verval herinnering werd verstuurd naar %s (%s)."
 
-#: includes/post.php:340 includes/post.php:548
-msgid "Comments"
-msgstr "Reacties"
+#~ msgid "Orbis Expiring Subscriptions"
+#~ msgstr "Orbis aflopende abonnementen"
 
-#: includes/post.php:341 includes/post.php:549
-msgid "Date"
-msgstr "Datum"
+#~ msgid "Expiring Subscriptions"
+#~ msgstr "Aflopende abonnementen"
 
-#: includes/post.php:544
-msgid "Cost Price"
-msgstr "Kostprijs"
+#~ msgid "Orbis Sent Reminders"
+#~ msgstr "Orbis verzonden herinneringen"
 
-#: includes/post.php:545
-msgid "Deprecated"
-msgstr "Vervallen"
+#~ msgid "Sent Reminders"
+#~ msgstr "Verzonden herinneringen"
 
-#: includes/post.php:601
-msgid "Yes"
-msgstr "Ja"
+#~ msgid "Reminder"
+#~ msgstr "Herinnering"
 
-#: includes/post.php:601
-msgid "No"
-msgstr "Nee"
+#~ msgid "URL"
+#~ msgstr "URL"
 
-#: includes/shortcodes.php:274
-msgid "Login required"
-msgstr "Inloggen vereist"
+#~ msgid "Subject"
+#~ msgstr "Onderwerp"
+
+#~ msgid "Template"
+#~ msgstr "Sjabloon"
+
+#~ msgid "Orbis Subscriptions Settings"
+#~ msgstr "Orbis abonnementen instellingen"
+
+#~ msgid "Settings"
+#~ msgstr "Instellingen"
+
+#~ msgid "Orbis Subscriptions Statistics"
+#~ msgstr "Orbis abonnementen statistieken"
+
+#~ msgid "Statistics"
+#~ msgstr "Statistieken"
+
+#~ msgid ""
+#~ "This comment was an subscription extend request (before: %s, after: %s)."
+#~ msgstr "Deze reactie was een abonnement verleng verzoek (voor: %s, na: %s)."
+
+#~ msgid "I sent the following message to %s: <blockquote>%s</blockquote>"
+#~ msgstr ""
+#~ "Ik heb het volgende bericht verstuurd aan %s: <blockquote>%s</blockquote>"
+
+#~ msgid "Subscriptions"
+#~ msgstr "Abonnementen"
+
+#~ msgctxt "post type general name"
+#~ msgid "Subscriptions"
+#~ msgstr "Abonnementen"
+
+#~ msgctxt "post type singular name"
+#~ msgid "Subscription"
+#~ msgstr "Abonnement"
+
+#~ msgid "Add New Subscription"
+#~ msgstr "Nieuwe abonnement toevoegen"
+
+#~ msgid "Edit Subscription"
+#~ msgstr "Bewerk abonnement"
+
+#~ msgid "New Subscription"
+#~ msgstr "Nieuwe abonnement"
+
+#~ msgid "View Subscription"
+#~ msgstr "Bekijk abonnement"
+
+#~ msgid "Search Subscriptions"
+#~ msgstr "Abonnementen zoeken"
+
+#~ msgid "No subscriptions found"
+#~ msgstr "Geen abonnementen gevonden"
+
+#~ msgid "No subscriptions found in Trash"
+#~ msgstr "Geen abonnementen gevonden in prullenbak"
+
+#~ msgid "Parent Subscription:"
+#~ msgstr "Bovenliggend abonnement"
+
+#~ msgctxt "slug"
+#~ msgid "subscriptions"
+#~ msgstr "abonnementen"
+
+#~ msgid "Subscription Products"
+#~ msgstr "Abonnement producten"
+
+#~ msgctxt "post type general name"
+#~ msgid "Subscription Products"
+#~ msgstr "Abonnement producten"
+
+#~ msgctxt "post type singular name"
+#~ msgid "Subscription Product"
+#~ msgstr "Abonnement product"
+
+#~ msgctxt "orbis_subs_type"
+#~ msgid "Add New"
+#~ msgstr "Nieuw abonnement product"
+
+#~ msgid "Add New Subscription Product"
+#~ msgstr "Nieuwe abonnement product toevoegen"
+
+#~ msgid "Edit Subscription Product"
+#~ msgstr "Bewerk abonnement product"
+
+#~ msgid "New Subscription Product"
+#~ msgstr "Nieuwe abonnement product"
+
+#~ msgid "View Subscription Product"
+#~ msgstr "Bekijk abonnement product"
+
+#~ msgid "Search Subscription Products"
+#~ msgstr "Zoeken abonnement producten"
+
+#~ msgid "No subscription products found"
+#~ msgstr "Geen abonnement producten gevonden"
+
+#~ msgid "No subscription products found in Trash"
+#~ msgstr "Geen abonnement producten gevonden in prullenbak"
+
+#~ msgid "Parent Subscription Product:"
+#~ msgstr "Bovenliggend abonnement product:"
+
+#~ msgid "Products"
+#~ msgstr "Producten"
+
+#~ msgctxt "slug"
+#~ msgid "subscription-products"
+#~ msgstr "abonnement-producten"
+
+#~ msgid "Subscription Details"
+#~ msgstr "Abonnement details"
+
+#~ msgid "Subscription Product Details"
+#~ msgstr "Abonnement product details"
+
+#~ msgid "I extended this subscription: <blockquote>%s</blockquote>"
+#~ msgstr "Ik heb dit abonnement verlengd: <blockquote>%s</blockquote>"
+
+#~ msgid "Person"
+#~ msgstr "Persoon"
+
+#~ msgid "Author"
+#~ msgstr "Auteur"
+
+#~ msgid "Comments"
+#~ msgstr "Reacties"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Cost Price"
+#~ msgstr "Kostprijs"
+
+#~ msgid "Deprecated"
+#~ msgstr "Vervallen"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nee"
+
+#~ msgid "Login required"
+#~ msgstr "Inloggen vereist"
 
 #~ msgid "Send Reminder"
 #~ msgstr "Verstuur herinnering"
 
 #~ msgid "ID"
 #~ msgstr "ID"
-
-#~ msgid "Company"
-#~ msgstr "Bedrijf"
 
 #~ msgid "Type"
 #~ msgstr "Type"
@@ -504,9 +516,6 @@ msgstr "Inloggen vereist"
 #~ msgid "Types"
 #~ msgstr "Types"
 
-#~ msgid "Details"
-#~ msgstr "Details"
-
 #~ msgid "Number"
 #~ msgstr "Aantal"
 
@@ -560,17 +569,8 @@ msgstr "Inloggen vereist"
 #~ msgid "Edit Keychain"
 #~ msgstr "Sleutelhanger bewerken"
 
-#~ msgid "New Keychain"
-#~ msgstr "Nieuwe sleutelhanger"
-
-#~ msgid "View Keychain"
-#~ msgstr "Bekijk sleutelhanger"
-
 #~ msgid "Search Keychains"
 #~ msgstr "Sleutelhangers zoeken"
-
-#~ msgid "No keychains found"
-#~ msgstr "Geen sleutelhangers gevonden"
 
 #~ msgctxt "slug"
 #~ msgid "keychains"
@@ -653,26 +653,14 @@ msgstr "Inloggen vereist"
 #~ msgid "Tag"
 #~ msgstr "Tag"
 
-#~ msgid "Search Tags"
-#~ msgstr "Zoek tags"
-
 #~ msgid "All Tags"
 #~ msgstr "Alle tags"
 
 #~ msgid "Parent Tag"
 #~ msgstr "Bovenliggende tag"
 
-#~ msgid "Parent Tag:"
-#~ msgstr "Bovenliggende tag:"
-
-#~ msgid "Edit Tag"
-#~ msgstr "Bewerk tag"
-
 #~ msgid "Update Tag"
 #~ msgstr "Update tag"
-
-#~ msgid "Add New Tag"
-#~ msgstr "Nieuwe tag"
 
 #~ msgid "New Tag Name"
 #~ msgstr "Nieuwe tag naam"
@@ -737,9 +725,6 @@ msgstr "Inloggen vereist"
 
 #~ msgid "No projects found."
 #~ msgstr "Geen projecten gevonden."
-
-#~ msgid "No projects found in Trash."
-#~ msgstr "Geen projecten gevonden in prullenbak."
 
 #~ msgid "Parent Project:"
 #~ msgstr "Bovenliggend project:"
