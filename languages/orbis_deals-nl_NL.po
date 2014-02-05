@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Orbis Deals\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/orbis-subscriptions\n"
-"POT-Creation-Date: 2014-01-31 15:19+0100\n"
-"PO-Revision-Date: 2014-01-31 15:19+0100\n"
-"Last-Translator: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/orbis-deals\n"
+"POT-Creation-Date: 2014-02-05 15:14:41+00:00\n"
+"PO-Revision-Date: 2014-02-05 16:15+0100\n"
+"Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x:2c,1;esc_attr__\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.3\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -118,6 +118,30 @@ msgstr "Bedrijf"
 #: templates/deals.php:8
 msgid "Title"
 msgstr "Titel"
+
+#. Plugin Name of the plugin/theme
+msgid "Orbis Deals"
+msgstr "Orbis deals"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.orbiswp.com/"
+msgstr "http://www.orbiswp.com/"
+
+#. Description of the plugin/theme
+msgid ""
+"The Orbis Deals plugin extends your Orbis environment with the option to add "
+"deals."
+msgstr ""
+"De Orbis deals plugin breidt je Orbis omgeving uit met de optie om deals toe "
+"te voegen."
+
+#. Author of the plugin/theme
+msgid "Pronamic"
+msgstr "Pronamic"
+
+#. Author URI of the plugin/theme
+msgid "http://www.pronamic.eu/"
+msgstr "http://www.pronamic.eu/"
 
 #~ msgid "j F, Y @ G:i:s"
 #~ msgstr "j F Y @ H:i"
@@ -439,22 +463,6 @@ msgstr "Titel"
 
 #~ msgid "Orbis Subscriptions"
 #~ msgstr "Orbis abonnementen"
-
-#~ msgid "http://www.orbiswp.com/"
-#~ msgstr "http://www.orbiswp.com/"
-
-#~ msgid ""
-#~ "The Orbis Subscriptions extends your Orbis environment with the option to "
-#~ "add subscription types and subscriptions."
-#~ msgstr ""
-#~ "De Orbis abonnementen plugin breidt je Orbis omgeving uit met de optie om "
-#~ "abonnement types en abonnement toe te voegen."
-
-#~ msgid "Pronamic"
-#~ msgstr "Pronamic"
-
-#~ msgid "http://www.pronamic.eu/"
-#~ msgstr "http://www.pronamic.eu/"
 
 #~ msgid "One year"
 #~ msgstr "Eén jaar"

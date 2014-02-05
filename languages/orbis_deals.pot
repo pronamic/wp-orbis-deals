@@ -1,0 +1,137 @@
+# Copyright (C) 2014 Orbis Deals
+# This file is distributed under the same license as the Orbis Deals package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Orbis Deals 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/orbis-deals\n"
+"POT-Creation-Date: 2014-02-05 15:14:41+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: admin/meta-box-deal-details.php:22 includes/post.php:210
+#: templates/deals.php:7
+msgid "Orbis ID"
+msgstr ""
+
+#: admin/meta-box-deal-details.php:30
+msgid "Company ID"
+msgstr ""
+
+#: admin/meta-box-deal-details.php:33
+msgid "Select Company"
+msgstr ""
+
+#: admin/meta-box-deal-details.php:38 includes/post.php:208
+#: templates/deal-details.php:28 templates/deals.php:10
+msgid "Price"
+msgstr ""
+
+#: admin/meta-box-deal-details.php:46 includes/post.php:209
+#: templates/deal-details.php:33 templates/deals.php:11
+msgid "Status"
+msgstr ""
+
+#: includes/functions.php:59
+msgid "Pending"
+msgstr ""
+
+#: includes/functions.php:60
+msgid "Won"
+msgstr ""
+
+#: includes/functions.php:61
+msgid "Lost"
+msgstr ""
+
+#: includes/post.php:11 includes/post.php:24
+msgid "Deals"
+msgstr ""
+
+#: includes/post.php:13
+msgctxt "post type general name"
+msgid "Deals"
+msgstr ""
+
+#: includes/post.php:14
+msgctxt "post type singular name"
+msgid "Deal"
+msgstr ""
+
+#: includes/post.php:15
+msgid "Add New"
+msgstr ""
+
+#: includes/post.php:16
+msgid "Add New Deal"
+msgstr ""
+
+#: includes/post.php:17
+msgid "Edit Deal"
+msgstr ""
+
+#: includes/post.php:18
+msgid "New Deal"
+msgstr ""
+
+#: includes/post.php:19
+msgid "View Deal"
+msgstr ""
+
+#: includes/post.php:20
+msgid "Search Deals"
+msgstr ""
+
+#: includes/post.php:21
+msgid "No deals found"
+msgstr ""
+
+#: includes/post.php:22
+msgid "No deals found in Trash"
+msgstr ""
+
+#: includes/post.php:23
+msgid "Parent Deals:"
+msgstr ""
+
+#: includes/post.php:32
+msgctxt "slug"
+msgid "deals"
+msgstr ""
+
+#: includes/post.php:47 templates/deal-details.php:18
+msgid "Deal Details"
+msgstr ""
+
+#: includes/post.php:207 templates/deal-details.php:23 templates/deals.php:9
+msgid "Company"
+msgstr ""
+
+#: templates/deals.php:8
+msgid "Title"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Orbis Deals"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.orbiswp.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"The Orbis Deals plugin extends your Orbis environment with the option to add "
+"deals."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pronamic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.pronamic.eu/"
+msgstr ""

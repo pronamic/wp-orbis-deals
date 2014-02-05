@@ -19,10 +19,8 @@ GitHub URI: https://github.com/pronamic/wp-orbis-deals
 */
 
 function orbis_deals_bootstrap() {
-
 	// Classes
 	require_once 'classes/orbis-deals-plugin.php';
-	require_once 'classes/orbis-deal.php';
 
 	// Functions
 	require_once 'includes/functions.php';
