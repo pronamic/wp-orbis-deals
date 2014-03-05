@@ -12,3 +12,15 @@ function orbis_deal_get_statuses() {
 		'lost'    => __( 'Lost'   , 'orbis_deals' ),
 	);
 }
+
+function orbis_deal_get_status_label( $status ) {
+	$statuses = orbis_deal_get_statuses();
+	
+	$label = null;
+	
+	if ( isset( $statuses[ $status ] ) ) {
+		$label = $statuses[ $status ];
+	}
+	
+	return $label;
+}
