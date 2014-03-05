@@ -3,17 +3,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Orbis Deals 1.0.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/orbis-deals\n"
-"POT-Creation-Date: 2014-02-05 15:14:41+00:00\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/orbis-deals\n"
+"POT-Creation-Date: 2014-03-05 13:30:08+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: admin/meta-box-deal-details.php:22 includes/post.php:210
-#: templates/deals.php:7
+#: admin/meta-box-deal-details.php:22
 msgid "Orbis ID"
 msgstr ""
 
@@ -25,93 +24,93 @@ msgstr ""
 msgid "Select Company"
 msgstr ""
 
-#: admin/meta-box-deal-details.php:38 includes/post.php:208
-#: templates/deal-details.php:28 templates/deals.php:10
+#: admin/meta-box-deal-details.php:38 templates/deal-details.php:28
 msgid "Price"
 msgstr ""
 
-#: admin/meta-box-deal-details.php:46 includes/post.php:209
-#: templates/deal-details.php:33 templates/deals.php:11
+#: admin/meta-box-deal-details.php:46 includes/post.php:116
+#: templates/deal-details.php:33
 msgid "Status"
 msgstr ""
 
-#: includes/functions.php:59
+#: includes/functions.php:10
 msgid "Pending"
 msgstr ""
 
-#: includes/functions.php:60
+#: includes/functions.php:11
 msgid "Won"
 msgstr ""
 
-#: includes/functions.php:61
+#: includes/functions.php:12
 msgid "Lost"
 msgstr ""
 
-#: includes/post.php:11 includes/post.php:24
-msgid "Deals"
-msgstr ""
-
-#: includes/post.php:13
-msgctxt "post type general name"
+#: includes/post.php:10 includes/post.php:23
 msgid "Deals"
 msgstr ""
 
 #: includes/post.php:14
-msgctxt "post type singular name"
-msgid "Deal"
-msgstr ""
-
-#: includes/post.php:15
 msgid "Add New"
 msgstr ""
 
-#: includes/post.php:16
+#: includes/post.php:15
 msgid "Add New Deal"
 msgstr ""
 
-#: includes/post.php:17
+#: includes/post.php:16
 msgid "Edit Deal"
 msgstr ""
 
-#: includes/post.php:18
+#: includes/post.php:17
 msgid "New Deal"
 msgstr ""
 
-#: includes/post.php:19
+#: includes/post.php:18
 msgid "View Deal"
 msgstr ""
 
-#: includes/post.php:20
+#: includes/post.php:19
 msgid "Search Deals"
 msgstr ""
 
-#: includes/post.php:21
+#: includes/post.php:20
 msgid "No deals found"
 msgstr ""
 
-#: includes/post.php:22
+#: includes/post.php:21
 msgid "No deals found in Trash"
 msgstr ""
 
-#: includes/post.php:23
+#: includes/post.php:22
 msgid "Parent Deals:"
 msgstr ""
 
-#: includes/post.php:32
-msgctxt "slug"
-msgid "deals"
-msgstr ""
-
-#: includes/post.php:47 templates/deal-details.php:18
+#: includes/post.php:45 templates/deal-details.php:18
 msgid "Deal Details"
 msgstr ""
 
-#: includes/post.php:207 templates/deal-details.php:23 templates/deals.php:9
-msgid "Company"
+#: includes/post.php:113
+msgid "Title"
 msgstr ""
 
-#: templates/deals.php:8
-msgid "Title"
+#: includes/post.php:114 includes/post.php:115
+msgid "Person"
+msgstr ""
+
+#: includes/post.php:117
+msgid "Author"
+msgstr ""
+
+#: includes/post.php:118
+msgid "Comments"
+msgstr ""
+
+#: includes/post.php:119
+msgid "Date"
+msgstr ""
+
+#: templates/deal-details.php:23
+msgid "Company"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -124,8 +123,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"The Orbis Deals plugin extends your Orbis environment with the option to add "
-"deals."
+"The Orbis Deals plugin extends your Orbis environment with the option to "
+"add deals."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -134,4 +133,19 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "http://www.pronamic.eu/"
+msgstr ""
+
+#: includes/post.php:12
+msgctxt "post type general name"
+msgid "Deals"
+msgstr ""
+
+#: includes/post.php:13
+msgctxt "post type singular name"
+msgid "Deal"
+msgstr ""
+
+#: includes/post.php:31
+msgctxt "slug"
+msgid "deals"
 msgstr ""

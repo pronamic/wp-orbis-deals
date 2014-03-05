@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Orbis Deals\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/orbis-deals\n"
-"POT-Creation-Date: 2014-02-05 15:14:41+00:00\n"
-"PO-Revision-Date: 2014-02-05 16:15+0100\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/orbis-deals\n"
+"POT-Creation-Date: 2014-03-05 13:30:08+00:00\n"
+"PO-Revision-Date: 2014-03-05 14:30+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -13,12 +13,11 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x:2c,1;esc_attr__\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/meta-box-deal-details.php:22 includes/post.php:210
-#: templates/deals.php:7
+#: admin/meta-box-deal-details.php:22
 msgid "Orbis ID"
 msgstr "Orbis ID"
 
@@ -30,94 +29,94 @@ msgstr "Bedrijf ID"
 msgid "Select Company"
 msgstr "Selecteer Bedrijf"
 
-#: admin/meta-box-deal-details.php:38 includes/post.php:208
-#: templates/deal-details.php:28 templates/deals.php:10
+#: admin/meta-box-deal-details.php:38 templates/deal-details.php:28
 msgid "Price"
 msgstr "Prijs"
 
-#: admin/meta-box-deal-details.php:46 includes/post.php:209
-#: templates/deal-details.php:33 templates/deals.php:11
+#: admin/meta-box-deal-details.php:46 includes/post.php:116
+#: templates/deal-details.php:33
 msgid "Status"
 msgstr "Status"
 
-#: includes/functions.php:59
+#: includes/functions.php:10
 msgid "Pending"
 msgstr "In afwachting"
 
-#: includes/functions.php:60
+#: includes/functions.php:11
 msgid "Won"
 msgstr "Gewonnen"
 
-#: includes/functions.php:61
+#: includes/functions.php:12
 msgid "Lost"
 msgstr "Verloren"
 
-#: includes/post.php:11 includes/post.php:24
-msgid "Deals"
-msgstr "Offertes"
-
-#: includes/post.php:13
-msgctxt "post type general name"
+#: includes/post.php:10 includes/post.php:23
 msgid "Deals"
 msgstr "Offertes"
 
 #: includes/post.php:14
-msgctxt "post type singular name"
-msgid "Deal"
-msgstr "Offerte"
-
-#: includes/post.php:15
 msgid "Add New"
 msgstr "Nieuwe Toevoegen"
 
-#: includes/post.php:16
+#: includes/post.php:15
 msgid "Add New Deal"
 msgstr "Nieuwe Offerte Maken"
 
-#: includes/post.php:17
+#: includes/post.php:16
 msgid "Edit Deal"
 msgstr "Bewerk Offerte"
 
-#: includes/post.php:18
+#: includes/post.php:17
 msgid "New Deal"
 msgstr "Nieuwe Offerte"
 
-#: includes/post.php:19
+#: includes/post.php:18
 msgid "View Deal"
 msgstr "Bekijk Offerte"
 
-#: includes/post.php:20
+#: includes/post.php:19
 msgid "Search Deals"
 msgstr "Zoek Offertes"
 
-#: includes/post.php:21
+#: includes/post.php:20
 msgid "No deals found"
 msgstr "Geen offertes gevonden"
 
-#: includes/post.php:22
+#: includes/post.php:21
 msgid "No deals found in Trash"
 msgstr "Geen offertes gevonden in de prullenbak"
 
-#: includes/post.php:23
+#: includes/post.php:22
 msgid "Parent Deals:"
 msgstr "Bovenliggende Offerte:"
 
-#: includes/post.php:32
-msgctxt "slug"
-msgid "deals"
-msgstr "offertes"
-
-#: includes/post.php:47 templates/deal-details.php:18
+#: includes/post.php:45 templates/deal-details.php:18
 msgid "Deal Details"
 msgstr "Offerte Details"
 
-#: includes/post.php:207 templates/deal-details.php:23 templates/deals.php:9
-msgid "Company"
-msgstr "Bedrijf"
-
-#: templates/deals.php:8
+#: includes/post.php:113
 msgid "Title"
 msgstr "Titel"
+
+#: includes/post.php:114 includes/post.php:115
+msgid "Person"
+msgstr "Persoon"
+
+#: includes/post.php:117
+msgid "Author"
+msgstr "Auteur"
+
+#: includes/post.php:118
+msgid "Comments"
+msgstr "Reacties"
+
+#: includes/post.php:119
+msgid "Date"
+msgstr "Datum"
+
+#: templates/deal-details.php:23
+msgid "Company"
+msgstr "Bedrijf"
 
 #. Plugin Name of the plugin/theme
 msgid "Orbis Deals"
@@ -142,6 +141,21 @@ msgstr "Pronamic"
 #. Author URI of the plugin/theme
 msgid "http://www.pronamic.eu/"
 msgstr "http://www.pronamic.eu/"
+
+#: includes/post.php:12
+msgctxt "post type general name"
+msgid "Deals"
+msgstr "Offertes"
+
+#: includes/post.php:13
+msgctxt "post type singular name"
+msgid "Deal"
+msgstr "Offerte"
+
+#: includes/post.php:31
+msgctxt "slug"
+msgid "deals"
+msgstr "offertes"
 
 #~ msgid "j F, Y @ G:i:s"
 #~ msgstr "j F Y @ H:i"
@@ -286,18 +300,6 @@ msgstr "http://www.pronamic.eu/"
 
 #~ msgid "I extended this subscription: <blockquote>%s</blockquote>"
 #~ msgstr "Ik heb dit abonnement verlengd: <blockquote>%s</blockquote>"
-
-#~ msgid "Person"
-#~ msgstr "Persoon"
-
-#~ msgid "Author"
-#~ msgstr "Auteur"
-
-#~ msgid "Comments"
-#~ msgstr "Reacties"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
 
 #~ msgid "Cost Price"
 #~ msgstr "Kostprijs"

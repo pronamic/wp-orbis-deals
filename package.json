@@ -1,0 +1,40 @@
+{
+  "name": "orbis-deals",
+  "version": "1.0.0",
+  "description": "The Orbis Deals plugin extends your Orbis environment with the option to add deals.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pronamic/wp-orbis-deals.git"
+  },
+  "keywords": [
+    "orbis",
+    "deal",
+    "deals",
+    "offer",
+    "offers"
+  ],
+  "author": {
+    "name": "Pronamic",
+    "email": "info@pronamic.nl",
+    "url": "http://www.pronamic.nl/"
+  },
+  "contributors": [
+    {
+      "name": "Remco Tolsma",
+      "email": "info@remcotolsma.nl",
+      "url": "http://www.remcotolsma.nl/"
+    }
+  ],
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/pronamic/wp-orbis-deals/issues",
+    "email": "support@pronamic.nl"
+  },
+  "homepage": "https://github.com/pronamic/wp-orbis-deals",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-phplint": "0.0.5",
+    "grunt-wp-i18n": "~0.4.0",
+    "grunt-checkwpversion": "~0.3.0"
+  }
+}
