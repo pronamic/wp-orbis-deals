@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Orbis Deals\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/orbis-subscriptions\n"
-"POT-Creation-Date: 2014-01-31 15:19+0100\n"
-"PO-Revision-Date: 2014-01-31 15:19+0100\n"
-"Last-Translator: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/orbis-deals\n"
+"POT-Creation-Date: 2014-03-05 14:59:01+00:00\n"
+"PO-Revision-Date: 2014-03-05 15:59+0100\n"
+"Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -13,111 +13,155 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x:2c,1;esc_attr__\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/meta-box-deal-details.php:22 includes/post.php:210
-#: templates/deals.php:7
-msgid "Orbis ID"
-msgstr "Orbis ID"
-
-#: admin/meta-box-deal-details.php:30
+#: admin/meta-box-deal-details.php:15
 msgid "Company ID"
 msgstr "Bedrijf ID"
 
-#: admin/meta-box-deal-details.php:33
+#: admin/meta-box-deal-details.php:18
 msgid "Select Company"
-msgstr "Selecteer Bedrijf"
+msgstr "Selecteer bedrijf"
 
-#: admin/meta-box-deal-details.php:38 includes/post.php:208
-#: templates/deal-details.php:28 templates/deals.php:10
+#: admin/meta-box-deal-details.php:23 includes/post.php:163
+#: templates/deal-details.php:28
 msgid "Price"
 msgstr "Prijs"
 
-#: admin/meta-box-deal-details.php:46 includes/post.php:209
-#: templates/deal-details.php:33 templates/deals.php:11
+#: admin/meta-box-deal-details.php:31 includes/post.php:164
+#: templates/deal-details.php:33
 msgid "Status"
 msgstr "Status"
 
-#: includes/functions.php:59
+#: includes/functions.php:10
 msgid "Pending"
 msgstr "In afwachting"
 
-#: includes/functions.php:60
+#: includes/functions.php:11
 msgid "Won"
 msgstr "Gewonnen"
 
-#: includes/functions.php:61
+#: includes/functions.php:12
 msgid "Lost"
 msgstr "Verloren"
 
-#: includes/post.php:11 includes/post.php:24
+#: includes/post.php:10 includes/post.php:23
 msgid "Deals"
-msgstr "Offertes"
-
-#: includes/post.php:13
-msgctxt "post type general name"
-msgid "Deals"
-msgstr "Offertes"
+msgstr "Deals"
 
 #: includes/post.php:14
-msgctxt "post type singular name"
-msgid "Deal"
-msgstr "Offerte"
+msgid "Add New"
+msgstr "Nieuwe deal"
 
 #: includes/post.php:15
-msgid "Add New"
-msgstr "Nieuwe Toevoegen"
+msgid "Add New Deal"
+msgstr "Nieuwe deal toevoegen"
 
 #: includes/post.php:16
-msgid "Add New Deal"
-msgstr "Nieuwe Offerte Maken"
+msgid "Edit Deal"
+msgstr "Deal bewerken"
 
 #: includes/post.php:17
-msgid "Edit Deal"
-msgstr "Bewerk Offerte"
+msgid "New Deal"
+msgstr "Nieuwe deal"
 
 #: includes/post.php:18
-msgid "New Deal"
-msgstr "Nieuwe Offerte"
+msgid "View Deal"
+msgstr "Deal bekijken"
 
 #: includes/post.php:19
-msgid "View Deal"
-msgstr "Bekijk Offerte"
+msgid "Search Deals"
+msgstr "Deals zoeken"
 
 #: includes/post.php:20
-msgid "Search Deals"
-msgstr "Zoek Offertes"
+msgid "No deals found"
+msgstr "Geen deals gevonden"
 
 #: includes/post.php:21
-msgid "No deals found"
-msgstr "Geen offertes gevonden"
+msgid "No deals found in Trash"
+msgstr "Geen deals gevonden in de prullenbak"
 
 #: includes/post.php:22
-msgid "No deals found in Trash"
-msgstr "Geen offertes gevonden in de prullenbak"
-
-#: includes/post.php:23
 msgid "Parent Deals:"
-msgstr "Bovenliggende Offerte:"
+msgstr "Bovenliggende deal:"
 
-#: includes/post.php:32
-msgctxt "slug"
-msgid "deals"
-msgstr "offertes"
-
-#: includes/post.php:47 templates/deal-details.php:18
+#: includes/post.php:45 templates/deal-details.php:18
 msgid "Deal Details"
-msgstr "Offerte Details"
+msgstr "Deal details"
 
-#: includes/post.php:207 templates/deal-details.php:23 templates/deals.php:9
+#: includes/post.php:137
+msgid "The deal '%s' was marked '%s' by %s."
+msgstr "Deze deal '%s' was gemarkeerd als '%s' door %s."
+
+#: includes/post.php:161
+msgid "Title"
+msgstr "Titel"
+
+#: includes/post.php:162 templates/deal-details.php:23
 msgid "Company"
 msgstr "Bedrijf"
 
-#: templates/deals.php:8
-msgid "Title"
-msgstr "Titel"
+#: includes/post.php:165
+msgid "Author"
+msgstr "Auteur"
+
+#: includes/post.php:166
+msgid "Comments"
+msgstr "Reacties"
+
+#: includes/post.php:167
+msgid "Date"
+msgstr "Datum"
+
+#. Plugin Name of the plugin/theme
+msgid "Orbis Deals"
+msgstr "Orbis deals"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.happywp.com/plugins/orbis-deals/"
+msgstr "http://www.happywp.com/plugins/orbis-deals/"
+
+#. Description of the plugin/theme
+msgid ""
+"The Orbis Deals plugin extends your Orbis environment with the option to add "
+"deals."
+msgstr ""
+"De Orbis deals plugin breidt je Orbis omgeving uit met de optie om deals toe "
+"te voegen."
+
+#. Author of the plugin/theme
+msgid "Pronamic"
+msgstr "Pronamic"
+
+#. Author URI of the plugin/theme
+msgid "http://www.pronamic.eu/"
+msgstr "http://www.pronamic.eu/"
+
+#: includes/post.php:12
+msgctxt "post type general name"
+msgid "Deals"
+msgstr "Deals"
+
+#: includes/post.php:13
+msgctxt "post type singular name"
+msgid "Deal"
+msgstr "Deal"
+
+#: includes/post.php:31
+msgctxt "slug"
+msgid "deals"
+msgstr "deals"
+
+#~ msgid "Person"
+#~ msgstr "Persoon"
+
+#~ msgid "Orbis ID"
+#~ msgstr "Orbis ID"
+
+#~ msgid "http://www.orbiswp.com/"
+#~ msgstr "http://www.orbiswp.com/"
 
 #~ msgid "j F, Y @ G:i:s"
 #~ msgstr "j F Y @ H:i"
@@ -262,18 +306,6 @@ msgstr "Titel"
 
 #~ msgid "I extended this subscription: <blockquote>%s</blockquote>"
 #~ msgstr "Ik heb dit abonnement verlengd: <blockquote>%s</blockquote>"
-
-#~ msgid "Person"
-#~ msgstr "Persoon"
-
-#~ msgid "Author"
-#~ msgstr "Auteur"
-
-#~ msgid "Comments"
-#~ msgstr "Reacties"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
 
 #~ msgid "Cost Price"
 #~ msgstr "Kostprijs"
@@ -439,22 +471,6 @@ msgstr "Titel"
 
 #~ msgid "Orbis Subscriptions"
 #~ msgstr "Orbis abonnementen"
-
-#~ msgid "http://www.orbiswp.com/"
-#~ msgstr "http://www.orbiswp.com/"
-
-#~ msgid ""
-#~ "The Orbis Subscriptions extends your Orbis environment with the option to "
-#~ "add subscription types and subscriptions."
-#~ msgstr ""
-#~ "De Orbis abonnementen plugin breidt je Orbis omgeving uit met de optie om "
-#~ "abonnement types en abonnement toe te voegen."
-
-#~ msgid "Pronamic"
-#~ msgstr "Pronamic"
-
-#~ msgid "http://www.pronamic.eu/"
-#~ msgstr "http://www.pronamic.eu/"
 
 #~ msgid "One year"
 #~ msgstr "Eén jaar"

@@ -4,27 +4,12 @@ global $wpdb, $post;
 
 wp_nonce_field( 'orbis_save_deal_details', 'orbis_deal_details_meta_box_nonce' );
 
-$deal = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->orbis_deals WHERE post_id = %d;", $post->ID ) );
-
-$deal_id = $company_id = $price = $status = '';
-
-if ( $deal ) {
-	$deal_id    = $deal->id;
-	$company_id = $deal->company_id;
-	$price      = $deal->price;
-	$status     = $deal->status;
-}
+$company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
+$price      = get_post_meta( $post->ID, '_orbis_deal_price', true );
+$status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 
 ?>
 <table class="form-table">
-	<tr valign="top">
-		<th scope="row">
-			<label for="orbis_deal_id"><?php _e( 'Orbis ID', 'orbis' ); ?></label>
-		</th>
-		<td>
-			<input id="orbis_deal_id" name="_orbis_deal_id" value="<?php echo esc_attr( $deal_id ); ?>" type="text" class="regular-text" readonly="readonly" />
-		</td>
-	</tr>
 	<tr valign="top">
 		<th scope="row">
 			<label for="orbis_deal_company"><?php _e( 'Company ID', 'orbis_deals' ); ?></label>
@@ -47,13 +32,18 @@ if ( $deal ) {
 		</th>
 		<td>
 			<select id="orbis_deal_status" name="_orbis_deal_status">
-
-				<?php foreach ( orbis_deal_get_statuses() as $status_key => $status_value ) : ?>
-
-				<option value="<?php echo $status_key; ?>" <?php selected( $status_key, $status ); ?>><?php echo $status_value; ?></option>
-
-				<?php endforeach ?>
-
+				<?php 
+				
+				foreach ( orbis_deal_get_statuses() as $status_key => $status_value ) {
+					printf(
+						'<option value="%s" %s>%s</option>',
+						esc_attr( $status_key ),
+						selected( $status_key, $status, false ),
+						esc_html( $status_value )
+					);
+				}
+				
+				?>
 			</select>
 		</td>
 	</tr>
