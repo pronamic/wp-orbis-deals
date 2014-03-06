@@ -23,7 +23,7 @@ $status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 			<label for="orbis_deal_price"><?php _e( 'Price', 'orbis_deals' ); ?></label>
 		</th>
 		<td>
-			<input id="orbis_deal_price" name="_orbis_deal_price" value="<?php echo esc_attr( $price ); ?>" type="text" class="regular-text" />
+			<input id="orbis_deal_price" name="_orbis_deal_price" value="<?php echo empty( $price ) ? '' : esc_attr( number_format( $price, 2, ',', '.' ) ); ?>" type="text" class="regular-text" />
 		</td>
 	</tr>
 	<tr valign="top">

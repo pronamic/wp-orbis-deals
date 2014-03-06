@@ -87,7 +87,11 @@ function orbis_save_deal_details( $post_id, $post ) {
 	// OK
 	$definition = array(
 		'_orbis_deal_company_id' => FILTER_SANITIZE_STRING,
-		'_orbis_deal_price'      => FILTER_SANITIZE_NUMBER_FLOAT,
+		'_orbis_deal_price'      => array(
+			'filter'  => FILTER_VALIDATE_FLOAT,
+			'flags'   => FILTER_FLAG_ALLOW_THOUSAND,
+			'options' => array( 'decimal' => ',' ),
+		),
 		'_orbis_deal_status'     => FILTER_SANITIZE_STRING,
 	);
 
