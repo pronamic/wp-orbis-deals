@@ -138,7 +138,7 @@ function orbis_deal_status_update( $post_id, $status_old, $status_new ) {
 	}
 
 	$comment_content = sprintf(
-		__( "The deal '%s' was marked '%s' by %s.", 'orbis_deal' ),
+		__( "The deal '%s' was marked '%s' by %s.", 'orbis_deals' ),
 		get_the_title( $post_id ),
 		orbis_deal_get_status_label( $status_new ),
 		$user->display_name
