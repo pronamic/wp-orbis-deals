@@ -2,13 +2,7 @@
 
 global $wpdb, $post;
 
-$subscription = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->orbis_deals WHERE post_id = %d;", $post->ID ) );
-
-$company_id = 0;
-
-if ( $subscription ) {
-	$company_id      = $subscription->company_id;
-}
+$company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
 
 $company_post_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->orbis_companies WHERE id = %d;", $company_id ) );
 
