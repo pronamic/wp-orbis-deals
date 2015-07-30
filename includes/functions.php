@@ -15,12 +15,12 @@ function orbis_deal_get_statuses() {
 
 function orbis_deal_get_status_label( $status ) {
 	$statuses = orbis_deal_get_statuses();
-	
+
 	$label = null;
-	
+
 	if ( isset( $statuses[ $status ] ) ) {
 		$label = $statuses[ $status ];
 	}
-	
+
 	return $label;
 }

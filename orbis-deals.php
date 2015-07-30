@@ -27,7 +27,7 @@ function orbis_deals_bootstrap() {
 
 	// Initialize
 	global $orbis_deals_plugin;
-	
+
 	$orbis_deals_plugin = new Orbis_Deals_Plugin( __FILE__ );
 }
 

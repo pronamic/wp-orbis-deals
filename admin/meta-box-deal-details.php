@@ -12,15 +12,15 @@ $status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 <table class="form-table">
 	<tr valign="top">
 		<th scope="row">
-			<label for="orbis_deal_company"><?php _e( 'Company ID', 'orbis_deals' ); ?></label>
+			<label for="orbis_deal_company"><?php esc_html_e( 'Company ID', 'orbis_deals' ); ?></label>
 		</th>
 		<td>
-			<input type="text" id="orbis_deal_company" name="_orbis_deal_company_id" value="<?php echo esc_attr( $company_id ); ?>" class="orbis-id-control orbis_company_id_field regular-text" data-text="<?php echo esc_attr( $company_id ); ?>" data-text="<?php echo esc_attr( $company_id ); ?>" placeholder="<?php _e( 'Select Company', 'orbis_deals' ); ?>" />
+			<input type="text" id="orbis_deal_company" name="_orbis_deal_company_id" value="<?php echo esc_attr( $company_id ); ?>" class="orbis-id-control orbis_company_id_field regular-text" data-text="<?php echo esc_attr( $company_id ); ?>" data-text="<?php echo esc_attr( $company_id ); ?>" placeholder="<?php esc_attr_e( 'Select Company', 'orbis_deals' ); ?>" />
 		</td>
 	</tr>
 	<tr valign="top">
 		<th scope="row">
-			<label for="orbis_deal_price"><?php _e( 'Price', 'orbis_deals' ); ?></label>
+			<label for="orbis_deal_price"><?php esc_html_e( 'Price', 'orbis_deals' ); ?></label>
 		</th>
 		<td>
 			<input id="orbis_deal_price" name="_orbis_deal_price" value="<?php echo empty( $price ) ? '' : esc_attr( number_format( $price, 2, ',', '.' ) ); ?>" type="text" class="regular-text" />
@@ -28,12 +28,12 @@ $status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 	</tr>
 	<tr valign="top">
 		<th scope="row">
-			<label for="orbis_deal_status"><?php _e( 'Status', 'orbis_deals' ); ?></label>
+			<label for="orbis_deal_status"><?php esc_html_e( 'Status', 'orbis_deals' ); ?></label>
 		</th>
 		<td>
 			<select id="orbis_deal_status" name="_orbis_deal_status">
-				<?php 
-				
+				<?php
+
 				foreach ( orbis_deal_get_statuses() as $status_key => $status_value ) {
 					printf(
 						'<option value="%s" %s>%s</option>',
@@ -42,7 +42,7 @@ $status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 						esc_html( $status_value )
 					);
 				}
-				
+
 				?>
 			</select>
 		</td>

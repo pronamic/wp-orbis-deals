@@ -32,9 +32,11 @@
   },
   "homepage": "https://github.com/pronamic/wp-orbis-deals",
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "~0.4.5",
+    "grunt-checkwpversion": "~0.3.0",
+    "grunt-phpcs": "^0.4.0",
     "grunt-phplint": "0.0.5",
-    "grunt-wp-i18n": "~0.4.0",
-    "grunt-checkwpversion": "~0.3.0"
+    "grunt-wp-i18n": "~0.5.2",
+    "load-grunt-tasks": "^3.2.0"
   }
 }
