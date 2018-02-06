@@ -202,6 +202,7 @@ add_action( 'manage_orbis_deal_posts_custom_column' , 'orbis_deal_column', 10, 2
 
 /**
  * Defaults
+ *
  * @param unknown $query
  */
 function orbis_deals_pre_get_posts( $query ) {

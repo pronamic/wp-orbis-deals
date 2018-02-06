@@ -40,3 +40,7 @@ Thumbs.db
 #########
 node_modules
 release
+
+# Composer #
+############
+vendor
