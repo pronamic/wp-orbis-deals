@@ -15,7 +15,7 @@ $status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 			<label for="orbis_deal_company"><?php esc_html_e( 'Company ID', 'orbis_deals' ); ?></label>
 		</th>
 		<td>
-			<input type="text" id="orbis_deal_company" name="_orbis_deal_company_id" value="<?php echo esc_attr( $company_id ); ?>" class="orbis-id-control orbis_company_id_field regular-text" data-text="<?php echo esc_attr( $company_id ); ?>" data-text="<?php echo esc_attr( $company_id ); ?>" placeholder="<?php esc_attr_e( 'Select Company', 'orbis_deals' ); ?>" />
+			<select type="text" id="orbis_deal_company" name="_orbis_deal_company_id" value="<?php echo esc_attr( $company_id ); ?>" class="orbis-id-control orbis_company_id_field regular-text" data-text="<?php echo esc_attr( $company_id ); ?>" data-text="<?php echo esc_attr( $company_id ); ?>" placeholder="<?php esc_attr_e( 'Select Company', 'orbis_deals' ); ?>"></select>
 		</td>
 	</tr>
 	<tr valign="top">
