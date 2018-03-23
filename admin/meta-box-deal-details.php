@@ -8,6 +8,8 @@ $company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
 $price      = get_post_meta( $post->ID, '_orbis_deal_price', true );
 $status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 
+$company = $wpdb->get_var( "SELECT name FROM $wpdb->orbis_companies WHERE id=$company_id" );
+
 ?>
 <table class="form-table">
 	<tr valign="top">
@@ -15,7 +17,11 @@ $status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 			<label for="orbis_deal_company"><?php esc_html_e( 'Company ID', 'orbis_deals' ); ?></label>
 		</th>
 		<td>
-			<select type="text" id="orbis_deal_company" name="_orbis_deal_company_id" value="<?php echo esc_attr( $company_id ); ?>" class="orbis-id-control orbis_company_id_field regular-text" data-text="<?php echo esc_attr( $company_id ); ?>" data-text="<?php echo esc_attr( $company_id ); ?>" placeholder="<?php esc_attr_e( 'Select Company', 'orbis_deals' ); ?>"></select>
+			<select id="orbis_deal_company" name="_orbis_deal_company_id" class="orbis-id-control orbis_company_id_field regular-text">
+				<option id="orbis_select2_default" value="<?php echo esc_attr( $company_id ); ?>">
+					<?php echo esc_attr( $company ); ?>
+				</option>
+			</select>
 		</td>
 	</tr>
 	<tr valign="top">
