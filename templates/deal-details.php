@@ -30,5 +30,5 @@ $company_post_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->o
 			</dl>
 		</div>
 	</div>
-	
+
 </div>

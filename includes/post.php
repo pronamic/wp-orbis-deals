@@ -138,17 +138,18 @@ function orbis_deal_status_update( $post_id, $status_old, $status_new ) {
 	}
 
 	$comment_content = sprintf(
-		__( "The deal '%s' was marked '%s' by %s.", 'orbis_deals' ),
+		/* translators: title of post, status(won, lost), name of user */
+		__( "The deal '%1\$s' was marked '%2\$s' by %3\$s.", 'orbis_deals' ),
 		get_the_title( $post_id ),
 		orbis_deal_get_status_label( $status_new ),
 		$user->display_name
 	);
 
 	$data = array(
-		'comment_post_ID'      => $post_id,
-		'comment_content'      => $comment_content,
-		'comment_author'       => 'Orbis',
-		'comment_type'         => $comment_type,
+		'comment_post_ID' => $post_id,
+		'comment_content' => $comment_content,
+		'comment_author'  => 'Orbis',
+		'comment_type'    => $comment_type,
 	);
 
 	$comment_id = wp_insert_comment( $data );
@@ -172,7 +173,7 @@ function orbis_deal_edit_columns( $columns ) {
 	);
 }
 
-add_filter( 'manage_orbis_deal_posts_columns' , 'orbis_deal_edit_columns' );
+add_filter( 'manage_orbis_deal_posts_columns', 'orbis_deal_edit_columns' );
 
 /**
  * Deal column.
@@ -182,23 +183,23 @@ add_filter( 'manage_orbis_deal_posts_columns' , 'orbis_deal_edit_columns' );
  */
 function orbis_deal_column( $column, $post_id ) {
 	switch ( $column ) {
-		case 'orbis_deal_company' :
+		case 'orbis_deal_company':
 			orbis_deal_the_company_name();
 
 			break;
-		case 'orbis_deal_price' :
+		case 'orbis_deal_price':
 			orbis_deal_the_price();
 
 			break;
 
-		case 'orbis_deal_status' :
+		case 'orbis_deal_status':
 			orbis_deal_the_status();
 
 			break;
 	}
 }
 
-add_action( 'manage_orbis_deal_posts_custom_column' , 'orbis_deal_column', 10, 2 );
+add_action( 'manage_orbis_deal_posts_custom_column', 'orbis_deal_column', 10, 2 );
 
 /**
  * Defaults
@@ -220,8 +221,8 @@ function orbis_deals_pre_get_posts( $query ) {
 			}
 
 			$meta_query[] = array(
-				'key'     => '_orbis_deal_status',
-				'value'   => $status,
+				'key'   => '_orbis_deal_status',
+				'value' => $status,
 			);
 
 			$query->set( 'meta_query', $meta_query );

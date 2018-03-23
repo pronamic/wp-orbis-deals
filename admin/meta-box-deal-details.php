@@ -8,7 +8,7 @@ $company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
 $price      = get_post_meta( $post->ID, '_orbis_deal_price', true );
 $status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
 
-$company = $wpdb->get_var( "SELECT name FROM $wpdb->orbis_companies WHERE id=$company_id" );
+$company = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM $wpdb->orbis_companies WHERE id=%s", $company_id ) );
 
 ?>
 <table class="form-table">
