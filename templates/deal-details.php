@@ -8,8 +8,8 @@ $company_post_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->o
 
 ?>
 <div class="card mb-3">
+	<div class="card-header"><?php esc_html_e( 'Deal Details', 'orbis_deals' ); ?></div>
 	<div class="card-body">
-		<h3 class="card-title"><?php esc_html_e( 'Deal Details', 'orbis_deals' ); ?></h3>
 
 		<div class="content">
 			<dl>
