@@ -1,5 +1,7 @@
 <?php
 
+use Pronamic\WordPress\Money\Money;
+
 /**
  * Return the company name.
  *
@@ -40,7 +42,8 @@ function orbis_deal_get_the_price() {
  * Echo the price.
  */
 function orbis_deal_the_price() {
-	echo orbis_price( orbis_deal_get_the_price() );
+	$price = new Money( orbis_deal_get_the_price(), 'EUR' );
+	echo $price->format_i18n();
 }
 
 /**
