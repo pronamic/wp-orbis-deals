@@ -1,21 +1,76 @@
 <?php
 
-global $wpdb, $post;
+global $wpdb, $post, $wp_query;
 
 $company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
 
 $company_post_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->orbis_companies WHERE id = %d;", $company_id ) );
 
+if ( function_exists( 'p2p_type' ) ) {
+	p2p_type( 'orbis_deals_to_companies' )->each_connected( $wp_query, array(), 'companies' );
+	p2p_type( 'orbis_deals_to_persons' )->each_connected( $wp_query, array(), 'persons' );
+}
+
+$url_agreement_form = '';
+
+$args = array(
+	'bedrijf'        => '',
+	'kvk-nummer'     => '',
+	'btw-nummer'     => '',
+	'voornaam'       => '',
+	'achternaam'     => '',
+	'straat'         => '',
+	'postcode'       => '',
+	'plaats'         => '',
+	'factuur-e-mail' => '',
+	'referentie'     => sprintf( 'Deal %s', $post->ID ),
+	'eenmalig'       => get_post_meta( $post->ID, '_orbis_deal_price', true ),
+	'jaarlijks'      => '0',
+);
+
+$company = null;
+
+if ( isset( $post->companies ) ) {
+	$company = reset( $post->companies );
+}
+
+if ( $company ) {
+	$args['bedrijf']        = get_the_title( $company );
+	$args['kvk-nummer']     = get_post_meta( $company->ID, '_orbis_kvk_number', true );
+	$args['btw-nummer']     = get_post_meta( $company->ID, '_orbis_vat_number', true );
+	$args['straat']         = get_post_meta( $company->ID, '_orbis_address', true );
+	$args['postcode']       = get_post_meta( $company->ID, '_orbis_postcode', true );
+	$args['plaats']         = get_post_meta( $company->ID, '_orbis_city', true );
+	$args['factuur-e-mail'] = get_post_meta( $company->ID, '_orbis_invoice_email', true );
+}
+
+$person = null;
+
+if ( isset( $post->persons ) ) {
+	$person = reset( $post->persons );
+}
+
+if ( $person ) {
+	$args['voornaam'] = get_the_title( $person );
+}
+
+$url_agreement_form = add_query_arg( $args, $url_agreement_form );
+
 ?>
 <div class="card mb-3">
 	<div class="card-header"><?php esc_html_e( 'Deal Details', 'orbis_deals' ); ?></div>
-	<div class="card-body">
 
+	<div class="card-body">
 		<div class="content">
 			<dl>
 				<dt><?php esc_html_e( 'Company', 'orbis_deals' ); ?></dt>
 				<dd>
 					<a href="<?php echo esc_attr( get_permalink( $company_post_id ) ); ?>"><?php orbis_deal_the_company_name(); ?></a>
+				</dd>
+
+				<dt><?php esc_html_e( 'Agreement Form', 'orbis_deals' ); ?></dt>
+				<dd>
+					<i class="fas fa-handshake"></i> <a href="<?php echo esc_url( $url_agreement_form ); ?>"><?php esc_html_e( 'Agreement Form', 'orbis_deals' ); ?></a>
 				</dd>
 
 				<dt><?php esc_html_e( 'Price', 'orbis_deals' ); ?></dt>
@@ -30,5 +85,44 @@ $company_post_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->o
 			</dl>
 		</div>
 	</div>
-
 </div>
+
+<?php if ( isset( $post->companies ) ) : ?>
+
+	<div class="card mb-3">
+		<div class="card-header"><?php esc_html_e( 'Companies', 'orbis_deals' ); ?></div>
+
+		<ul class="list">
+
+			<?php foreach ( $post->companies as $company ) : ?>
+
+				<li>
+					<a href="<?php echo esc_url( get_permalink( $company ) ); ?>"><?php echo esc_html( get_the_title( $company ) ); ?></a>
+				</li>
+
+			<?php endforeach; ?>
+
+		</ul>
+	</div>
+
+<?php endif; ?>
+
+<?php if ( isset( $post->persons ) ) : ?>
+
+	<div class="card mb-3">
+		<div class="card-header"><?php esc_html_e( 'Persons', 'orbis_deals' ); ?></div>
+
+		<ul class="list">
+
+			<?php foreach ( $post->persons as $person ) : ?>
+
+				<li>
+					<a href="<?php echo esc_url( get_permalink( $person ) ); ?>"><?php echo esc_html( get_the_title( $person ) ); ?></a>
+				</li>
+
+			<?php endforeach; ?>
+
+		</ul>
+	</div>
+
+<?php endif; ?>
