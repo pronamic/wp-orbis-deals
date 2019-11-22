@@ -11,21 +11,26 @@ if ( function_exists( 'p2p_type' ) ) {
 	p2p_type( 'orbis_deals_to_persons' )->each_connected( $wp_query, array(), 'persons' );
 }
 
-$url_agreement_form = '';
+$url_agreement_form = 'https://www.pronamic.nl/akkoord/';
+
+$user  = wp_get_current_user();
+$price = get_post_meta( $post->ID, '_orbis_deal_price', true );
 
 $args = array(
-	'bedrijf'        => '',
-	'kvk-nummer'     => '',
-	'btw-nummer'     => '',
-	'voornaam'       => '',
-	'achternaam'     => '',
-	'straat'         => '',
-	'postcode'       => '',
-	'plaats'         => '',
-	'factuur-e-mail' => '',
-	'referentie'     => sprintf( 'Deal %s', $post->ID ),
-	'eenmalig'       => get_post_meta( $post->ID, '_orbis_deal_price', true ),
-	'jaarlijks'      => '0',
+	'bedrijf'                => '',
+	'kvk-nummer'             => '',
+	'btw-nummer'             => '',
+	'voornaam'               => '',
+	'achternaam'             => '',
+	'straat'                 => '',
+	'postcode'               => '',
+	'plaats'                 => '',
+	'factuur-e-mail'         => '',
+	'referentie'             => sprintf( 'Deal %s', $post->ID ),
+	'eenmalig'               => number_format_i18n( $price, 2 ),
+	'jaarlijks'              => '0',
+	'supplier-contact-name'  => get_the_author_meta( 'display_name' ),
+	'supplier-contact-email' => get_the_author_meta( 'user_email' ),
 );
 
 $company = null;
@@ -42,6 +47,13 @@ if ( $company ) {
 	$args['postcode']       = get_post_meta( $company->ID, '_orbis_postcode', true );
 	$args['plaats']         = get_post_meta( $company->ID, '_orbis_city', true );
 	$args['factuur-e-mail'] = get_post_meta( $company->ID, '_orbis_invoice_email', true );
+
+	$update_datetime = DateTimeImmutable::createFromFormat( 'Y-m-d', '2019-11-01' );
+	$post_datetime = get_post_datetime( $company );
+
+	if ( $post_datetime < $update_datetime ) {
+		$args['av-update'] = '1';
+	}
 }
 
 $person = null;
