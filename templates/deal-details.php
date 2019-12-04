@@ -29,6 +29,7 @@ $args = array(
 	'referentie'             => sprintf( 'Deal %s', $post->ID ),
 	'eenmalig'               => number_format_i18n( $price, 2 ),
 	'jaarlijks'              => '0',
+	'maandelijks'            => '0',
 	'supplier-contact-name'  => get_the_author_meta( 'display_name' ),
 	'supplier-contact-email' => get_the_author_meta( 'user_email' ),
 );
@@ -63,7 +64,15 @@ if ( isset( $post->persons ) ) {
 }
 
 if ( $person ) {
-	$args['voornaam'] = get_the_title( $person );
+	$names = explode( ' ', get_the_title( $person ) );
+
+	$first_name = array_shift( $names );
+
+	$args['voornaam'] = $first_name;
+
+	if ( ! empty( $names ) ) {
+		$args['achternaam'] = implode( ' ', $names );
+	}
 }
 
 $url_agreement_form = add_query_arg( $args, $url_agreement_form );
