@@ -31,5 +31,7 @@
     "email": "support@pronamic.nl"
   },
   "homepage": "https://github.com/pronamic/wp-orbis-deals",
-  "devDependencies": {}
+  "devDependencies": {
+    "@wordpress/env": "^8.2.0"
+  }
 }
