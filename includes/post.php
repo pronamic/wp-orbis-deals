@@ -29,7 +29,7 @@ function orbis_deals_create_initial_post_types() {
 			'has_archive'   => true,
 			'rewrite'       => array(
 				'slug' => _x( 'deals', 'slug', 'orbis_deals' ),
-			)
+			),
 		)
 	);
 }
@@ -80,7 +80,7 @@ function orbis_save_deal_details( $post_id, $post ) {
 	}
 
 	// Check permissions
-	if ( ! ( $post->post_type == 'orbis_deal' && current_user_can( 'edit_post', $post_id ) ) ) {
+	if ( ! ( 'orbis_deal' === $post->post_type && current_user_can( 'edit_post', $post_id ) ) ) {
 		return;
 	}
 
@@ -100,7 +100,7 @@ function orbis_save_deal_details( $post_id, $post ) {
 	// Status
 	$status_old = get_post_meta( $post_id, '_orbis_deal_status', true );
 	$status_new = $data['_orbis_deal_status'];
-	
+
 	foreach ( $data as $key => $value ) {
 		if ( empty( $value ) ) {
 			delete_post_meta( $post_id, $key );
@@ -108,9 +108,9 @@ function orbis_save_deal_details( $post_id, $post ) {
 			update_post_meta( $post_id, $key, $value );
 		}
 	}
-	
+
 	// Action
-	if ( $post->post_status == 'publish' && $status_old != $status_new ) {
+	if ( 'publish' === $post->post_status && $status_old !== $status_new ) {
 		// @see https://github.com/woothemes/woocommerce/blob/v2.1.4/includes/class-wc-order.php#L1274
 		do_action( 'orbis_deal_status_' . $status_old . '_to_' . $status_new, $post_id );
 		do_action( 'orbis_deal_status_update', $post_id, $status_old, $status_new );
@@ -121,7 +121,7 @@ add_action( 'save_post', 'orbis_save_deal_details', 10, 2 );
 
 /**
  * Deal status update
- * 
+ *
  * @param int $post_id
  */
 function orbis_deal_status_update( $post_id, $status_old, $status_new ) {
@@ -138,17 +138,18 @@ function orbis_deal_status_update( $post_id, $status_old, $status_new ) {
 	}
 
 	$comment_content = sprintf(
-		__( "The deal '%s' was marked '%s' by %s.", 'orbis_deals' ),
+		/* translators: title of post, status(won, lost), name of user */
+		__( "The deal '%1\$s' was marked '%2\$s' by %3\$s.", 'orbis_deals' ),
 		get_the_title( $post_id ),
 		orbis_deal_get_status_label( $status_new ),
 		$user->display_name
 	);
-	
+
 	$data = array(
-		'comment_post_ID'      => $post_id,
-		'comment_content'      => $comment_content,
-		'comment_author'       => 'Orbis',
-		'comment_type'         => $comment_type,
+		'comment_post_ID' => $post_id,
+		'comment_content' => $comment_content,
+		'comment_author'  => 'Orbis',
+		'comment_type'    => $comment_type,
 	);
 
 	$comment_id = wp_insert_comment( $data );
@@ -172,7 +173,7 @@ function orbis_deal_edit_columns( $columns ) {
 	);
 }
 
-add_filter( 'manage_orbis_deal_posts_columns' , 'orbis_deal_edit_columns' );
+add_filter( 'manage_orbis_deal_posts_columns', 'orbis_deal_edit_columns' );
 
 /**
  * Deal column.
@@ -182,47 +183,48 @@ add_filter( 'manage_orbis_deal_posts_columns' , 'orbis_deal_edit_columns' );
  */
 function orbis_deal_column( $column, $post_id ) {
 	switch ( $column ) {
-		case 'orbis_deal_company' :
+		case 'orbis_deal_company':
 			orbis_deal_the_company_name();
 
 			break;
-		case 'orbis_deal_price' :
+		case 'orbis_deal_price':
 			orbis_deal_the_price();
 
 			break;
 
-		case 'orbis_deal_status' :
+		case 'orbis_deal_status':
 			orbis_deal_the_status();
 
 			break;
 	}
 }
 
-add_action( 'manage_orbis_deal_posts_custom_column' , 'orbis_deal_column', 10, 2 );
+add_action( 'manage_orbis_deal_posts_custom_column', 'orbis_deal_column', 10, 2 );
 
 /**
  * Defaults
+ *
  * @param unknown $query
  */
 function orbis_deals_pre_get_posts( $query ) {
 	$post_type = $query->get( 'post_type' );
 
-	if ( 'orbis_deal' == $post_type ) {
+	if ( 'orbis_deal' === $post_type ) {
 		// Status
 		$status = $query->get( 'orbis_deal_status' );
 
 		if ( $status ) {
 			$meta_query = $query->get( 'meta_query' );
-			
+
 			if ( ! is_array( $meta_query ) ) {
 				$meta_query = array();
 			}
-			
+
 			$meta_query[] = array(
-				'key'     => '_orbis_deal_status',
-				'value'   => $status,
+				'key'   => '_orbis_deal_status',
+				'value' => $status,
 			);
-			
+
 			$query->set( 'meta_query', $meta_query );
 		}
 	}

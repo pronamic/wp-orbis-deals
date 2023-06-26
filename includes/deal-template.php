@@ -1,5 +1,7 @@
 <?php
 
+use Pronamic\WordPress\Money\Money;
+
 /**
  * Return the company name.
  *
@@ -10,7 +12,7 @@ function orbis_deal_get_the_company_name() {
 	global $wpdb;
 
 	$company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
-	
+
 	$name = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM $wpdb->orbis_companies WHERE id = %d;", $company_id ) );
 
 	return $name;
@@ -20,7 +22,7 @@ function orbis_deal_get_the_company_name() {
  * Echo the company name.
  */
 function orbis_deal_the_company_name() {
-	echo orbis_deal_get_the_company_name();
+	echo esc_html( orbis_deal_get_the_company_name() );
 }
 
 /**
@@ -40,7 +42,8 @@ function orbis_deal_get_the_price() {
  * Echo the price.
  */
 function orbis_deal_the_price() {
-	echo orbis_price( orbis_deal_get_the_price() );
+	$price = new Money( orbis_deal_get_the_price(), 'EUR' );
+	echo $price->format_i18n();
 }
 
 /**
@@ -71,5 +74,5 @@ function orbis_deal_get_the_status( $get_as_key = false ) {
  * @param bool $get_as_key
  */
 function orbis_deal_the_status( $get_as_key = false ) {
-	echo  orbis_deal_get_the_status( $get_as_key );
+	echo esc_html( orbis_deal_get_the_status( $get_as_key ) );
 }
