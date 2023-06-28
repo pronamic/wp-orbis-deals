@@ -99,6 +99,7 @@ class Orbis_Deals_RestController {
 
 		return [
 			'post_id' => $post_id,
+			'hash'    => \wp_hash( $post_id ),
 			'lines'   => $lines,
 		];
 	}

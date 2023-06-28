@@ -33,6 +33,7 @@ $args = array(
 	'supplier-contact-name'  => get_the_author_meta( 'display_name' ),
 	'supplier-contact-email' => get_the_author_meta( 'user_email' ),
 	'orbis_deal_id'          => $post->ID,
+	'orbis_deal_hash'        => wp_hash( $post->ID ),
 );
 
 $company = null;
