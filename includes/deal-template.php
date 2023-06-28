@@ -42,7 +42,14 @@ function orbis_deal_get_the_price() {
  * Echo the price.
  */
 function orbis_deal_the_price() {
-	$price = new Money( orbis_deal_get_the_price(), 'EUR' );
+	$value = orbis_deal_get_the_price();
+
+	if ( '' === $value ) {
+		return;
+	}
+
+	$price = new Money( $value, 'EUR' );
+
 	echo $price->format_i18n();
 }
 
