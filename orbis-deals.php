@@ -29,6 +29,13 @@ function orbis_deals_bootstrap() {
 	global $orbis_deals_plugin;
 
 	$orbis_deals_plugin = new Orbis_Deals_Plugin( __FILE__ );
+
+	// REST API
+	require_once 'includes/rest.php';
+
+	$rest_controller = new Orbis_Deals_RestController();
+
+	add_action( 'rest_api_init', [ $rest_controller, 'rest_api_init' ] );
 }
 
-add_action( 'orbis_bootstrap', 'orbis_deals_bootstrap' );
+add_action( 'plugins_loaded', 'orbis_deals_bootstrap' );

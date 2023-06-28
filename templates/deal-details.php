@@ -32,6 +32,7 @@ $args = array(
 	'maandelijks'            => '0',
 	'supplier-contact-name'  => get_the_author_meta( 'display_name' ),
 	'supplier-contact-email' => get_the_author_meta( 'user_email' ),
+	'orbis_deal_id'          => $post->ID,
 );
 
 $company = null;

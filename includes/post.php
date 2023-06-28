@@ -109,6 +109,52 @@ function orbis_save_deal_details( $post_id, $post ) {
 		}
 	}
 
+	// REST
+	$request = new WP_REST_Request( 'POST', '/orbis/v1/deals/' . $post_id );
+
+	$lines = [];
+
+	if ( array_key_exists( 'orbis_deal_lines', $_POST ) ) {
+		$lines = array_map(
+			function( $line ) {
+				$quantity    = 0;
+				$description = '';
+				$amount      = 0;
+				$recurrence  = 'none';
+
+				if ( array_key_exists( 'quantity', $line ) ) {
+					$quantity = (int) sanitize_text_field( $line['quantity'] );
+				}
+
+				if ( array_key_exists( 'description', $line ) ) {
+					$description = sanitize_text_field( $line['description'] );
+				}
+
+				if ( array_key_exists( 'amount', $line ) ) {
+					$value  = sanitize_text_field( $line['amount'] );
+					$amount = ( '' !== $value ) ? $value : $amount;
+				}
+
+				if ( array_key_exists( 'recurrence', $line ) ) {
+					$value      = sanitize_text_field( $line['recurrence'] );
+					$recurrence = ( '' !== $value ) ? $value : $recurrence;
+				}
+
+				return (object) [
+					'quantity'    => $quantity,
+					'description' => $description,
+					'amount'      => $amount,
+					'recurrence'  => $recurrence,
+				];
+			},
+			wp_unslash( $_POST['orbis_deal_lines'] )
+		);
+	}
+
+	$request->set_param( 'lines', $lines );
+
+	$response = \rest_do_request( $request );
+
 	// Action
 	if ( 'publish' === $post->post_status && $status_old !== $status_new ) {
 		// @see https://github.com/woothemes/woocommerce/blob/v2.1.4/includes/class-wc-order.php#L1274
@@ -239,3 +285,28 @@ function orbis_deals_query_vars( $query_vars ) {
 }
 
 add_filter( 'query_vars', 'orbis_deals_query_vars' );
+
+
+add_filter(
+	'the_content',
+	function( $content ) {
+		if ( 'orbis_deal' !== get_post_type() ) {
+			return $content;
+		}
+
+		$post_id = get_the_ID();
+
+		$orbis_deal = (object) [
+			'post_id' => $post_id,
+			'lines'   => (array) json_decode( get_post_meta( $post_id, '_orbis_deal_lines', true ) ),
+		];
+
+		ob_start();
+
+		include __DIR__ . '/../templates/deal-lines.php';
+
+		$add = ob_get_clean();
+
+		return $content . $add;
+	}
+);

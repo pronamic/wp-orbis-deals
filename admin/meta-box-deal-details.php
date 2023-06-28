@@ -54,3 +54,76 @@ $company = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM $wpdb->orbis_compan
 		</td>
 	</tr>
 </table>
+
+<?php
+
+$lines = (array) json_decode( get_post_meta( $post->ID, '_orbis_deal_lines', true ) );
+
+$new_line = (object) [
+	'quantity'    => '',
+	'description' => '',
+	'amount'      => '',
+	'period'      => '',
+];
+
+$lines[] = $new_line;
+$lines[] = $new_line;
+$lines[] = $new_line;
+$lines[] = $new_line;
+$lines[] = $new_line;
+
+?>
+<table>
+	<thead>
+		<tr>
+			<th scope="col"><?php esc_html_e( 'Quantity', 'orbis_deals' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Description', 'orbis_deals' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Amount', 'orbis_deals' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Recurrence', 'orbis_deals' ); ?></th>
+		</tr>
+	</thead>
+
+	<tbody>
+
+		<?php foreach ( $lines as $key => $line ) : ?>
+
+			<tr>
+				<td>
+					<input type="number" name="orbis_deal_lines[<?php echo esc_attr( $key ) ; ?>][quantity]" value="<?php echo esc_attr( $line->quantity ); ?>">
+				</td>
+				<td>
+					<input type="text" name="orbis_deal_lines[<?php echo esc_attr( $key ) ; ?>][description]" value="<?php echo esc_attr( $line->description ); ?>">
+				</td>
+				<td>
+					<input type="number" name="orbis_deal_lines[<?php echo esc_attr( $key ) ; ?>][amount]" min="0" step="0.01" value="<?php echo esc_attr( $line->amount ); ?>">
+				</td>
+				<td>
+					<?php
+
+					$options = [
+						'none'   => __( 'None', 'orbis_deals' ),
+						'annual' => __( 'Annual', 'orbis_deals' ),
+					];
+
+					?>
+					<select name="orbis_deal_lines[<?php echo esc_attr( $key ) ; ?>][recurrence]">
+						<?php
+
+						foreach ( $options as $value => $label ) {
+							printf(
+								'<option value="%s" %s>%s</option>',
+								esc_attr( $value ),
+								selected( $value, $line->recurrence, false ),
+								esc_html( $label )
+							);
+						}
+
+						?>
+					</select>
+				</td>
+			</tr>
+
+		<?php endforeach; ?>
+
+	</tbody>
+</table>
