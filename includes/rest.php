@@ -156,14 +156,15 @@ class Orbis_Deals_RestController {
 		$lines = (array) json_decode( get_post_meta( $post_id, '_orbis_deal_lines', true ) );
 
 		return [
-			'post_id'  => $post_id,
-			'hash'     => \wp_hash( $post_id ),
-			'customer' => $customer,
-			'supplier' => [
+			'post_id'   => $post_id,
+			'reference' => \sprintf( 'Deal %s', $post_id ),
+			'hash'      => \wp_hash( $post_id ),
+			'customer'  => $customer,
+			'supplier'  => [
 				'name'  => get_the_author_meta( 'display_name', get_post_field( 'post_author', $post_id ) ),
 				'email' => get_the_author_meta( 'user_email', get_post_field( 'post_author', $post_id ) ),
 			],
-			'lines'    => $lines,
+			'lines'     => $lines,
 		];
 	}
 
