@@ -70,7 +70,7 @@ class Orbis_Deals_RestController {
 									'required'    => false,
 								],
 								'recurrence'  => [
-									'description' => \__( 'Recurrence.', 'pronamic-twinfield' ),
+									'description' => \__( 'Recurrence.', 'orbis-deals' ),
 									'type'        => 'string',
 									'enum'        => [
 										'none',

@@ -21,27 +21,27 @@ $url_agreement_form = add_query_arg(
 
 ?>
 <div class="card mb-3">
-	<div class="card-header"><?php esc_html_e( 'Deal Details', 'orbis_deals' ); ?></div>
+	<div class="card-header"><?php esc_html_e( 'Deal Details', 'orbis-deals' ); ?></div>
 
 	<div class="card-body">
 		<div class="content">
 			<dl>
-				<dt><?php esc_html_e( 'Company', 'orbis_deals' ); ?></dt>
+				<dt><?php esc_html_e( 'Company', 'orbis-deals' ); ?></dt>
 				<dd>
 					<a href="<?php echo \esc_url( get_permalink( $company_post_id ) ); ?>"><?php orbis_deal_the_company_name(); ?></a>
 				</dd>
 
-				<dt><?php esc_html_e( 'Agreement Form', 'orbis_deals' ); ?></dt>
+				<dt><?php esc_html_e( 'Agreement Form', 'orbis-deals' ); ?></dt>
 				<dd>
-					<i class="fas fa-handshake"></i> <a href="<?php echo esc_url( $url_agreement_form ); ?>"><?php esc_html_e( 'Agreement Form', 'orbis_deals' ); ?></a>
+					<i class="fas fa-handshake"></i> <a href="<?php echo esc_url( $url_agreement_form ); ?>"><?php esc_html_e( 'Agreement Form', 'orbis-deals' ); ?></a>
 				</dd>
 
-				<dt><?php esc_html_e( 'Price', 'orbis_deals' ); ?></dt>
+				<dt><?php esc_html_e( 'Price', 'orbis-deals' ); ?></dt>
 				<dd>
 					<?php orbis_deal_the_price(); ?>
 				</dd>
 
-				<dt><?php esc_html_e( 'Status', 'orbis_deals' ); ?></dt>
+				<dt><?php esc_html_e( 'Status', 'orbis-deals' ); ?></dt>
 				<dd>
 					<?php orbis_deal_the_status(); ?>
 				</dd>
@@ -53,7 +53,7 @@ $url_agreement_form = add_query_arg(
 <?php if ( isset( $post->companies ) ) : ?>
 
 	<div class="card mb-3">
-		<div class="card-header"><?php esc_html_e( 'Companies', 'orbis_deals' ); ?></div>
+		<div class="card-header"><?php esc_html_e( 'Companies', 'orbis-deals' ); ?></div>
 
 		<ul class="list">
 
@@ -73,7 +73,7 @@ $url_agreement_form = add_query_arg(
 <?php if ( isset( $post->persons ) ) : ?>
 
 	<div class="card mb-3">
-		<div class="card-header"><?php esc_html_e( 'Persons', 'orbis_deals' ); ?></div>
+		<div class="card-header"><?php esc_html_e( 'Persons', 'orbis-deals' ); ?></div>
 
 		<ul class="list">
 

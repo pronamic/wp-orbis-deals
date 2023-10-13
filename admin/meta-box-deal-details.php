@@ -14,7 +14,7 @@ $company = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM $wpdb->orbis_compan
 <table class="form-table">
 	<tr valign="top">
 		<th scope="row">
-			<label for="orbis_deal_company"><?php esc_html_e( 'Company ID', 'orbis_deals' ); ?></label>
+			<label for="orbis_deal_company"><?php esc_html_e( 'Company ID', 'orbis-deals' ); ?></label>
 		</th>
 		<td>
 			<select id="orbis_deal_company" name="_orbis_deal_company_id" class="orbis-id-control orbis_company_id_field regular-text">
@@ -26,7 +26,7 @@ $company = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM $wpdb->orbis_compan
 	</tr>
 	<tr valign="top">
 		<th scope="row">
-			<label for="orbis_deal_price"><?php esc_html_e( 'Price', 'orbis_deals' ); ?></label>
+			<label for="orbis_deal_price"><?php esc_html_e( 'Price', 'orbis-deals' ); ?></label>
 		</th>
 		<td>
 			<input id="orbis_deal_price" name="_orbis_deal_price" value="<?php echo empty( $price ) ? '' : esc_attr( number_format( $price, 2, ',', '.' ) ); ?>" type="text" class="regular-text" />
@@ -34,7 +34,7 @@ $company = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM $wpdb->orbis_compan
 	</tr>
 	<tr valign="top">
 		<th scope="row">
-			<label for="orbis_deal_status"><?php esc_html_e( 'Status', 'orbis_deals' ); ?></label>
+			<label for="orbis_deal_status"><?php esc_html_e( 'Status', 'orbis-deals' ); ?></label>
 		</th>
 		<td>
 			<select id="orbis_deal_status" name="_orbis_deal_status">
@@ -76,10 +76,10 @@ $lines[] = $new_line;
 <table>
 	<thead>
 		<tr>
-			<th scope="col"><?php esc_html_e( 'Quantity', 'orbis_deals' ); ?></th>
-			<th scope="col"><?php esc_html_e( 'Description', 'orbis_deals' ); ?></th>
-			<th scope="col"><?php esc_html_e( 'Amount', 'orbis_deals' ); ?></th>
-			<th scope="col"><?php esc_html_e( 'Recurrence', 'orbis_deals' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Quantity', 'orbis-deals' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Description', 'orbis-deals' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Amount', 'orbis-deals' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Recurrence', 'orbis-deals' ); ?></th>
 		</tr>
 	</thead>
 
@@ -101,9 +101,9 @@ $lines[] = $new_line;
 					<?php
 
 					$options = [
-						'none'    => __( 'None', 'orbis_deals' ),
-						'annual'  => __( 'Annual', 'orbis_deals' ),
-						'monthly' => __( 'Monthly', 'orbis_deals' ),
+						'none'    => __( 'None', 'orbis-deals' ),
+						'annual'  => __( 'Annual', 'orbis-deals' ),
+						'monthly' => __( 'Monthly', 'orbis-deals' ),
 					];
 
 					?>

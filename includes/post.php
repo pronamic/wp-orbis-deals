@@ -7,20 +7,20 @@ function orbis_deals_create_initial_post_types() {
 	register_post_type(
 		'orbis_deal',
 		array(
-			'label'         => __( 'Deals', 'orbis_deals' ),
+			'label'         => __( 'Deals', 'orbis-deals' ),
 			'labels'        => array(
-				'name'               => _x( 'Deals', 'post type general name', 'orbis_deals' ),
-				'singular_name'      => _x( 'Deal', 'post type singular name', 'orbis_deals' ),
-				'add_new'            => __( 'Add New', 'orbis_deals' ),
-				'add_new_item'       => __( 'Add New Deal', 'orbis_deals' ),
-				'edit_item'          => __( 'Edit Deal', 'orbis_deals' ),
-				'new_item'           => __( 'New Deal', 'orbis_deals' ),
-				'view_item'          => __( 'View Deal', 'orbis_deals' ),
-				'search_items'       => __( 'Search Deals', 'orbis_deals' ),
-				'not_found'          => __( 'No deals found', 'orbis_deals' ),
-				'not_found_in_trash' => __( 'No deals found in Trash', 'orbis_deals' ),
-				'parent_item_colon'  => __( 'Parent Deals:', 'orbis_deals' ),
-				'menu_name'          => __( 'Deals', 'orbis_deals' ),
+				'name'               => _x( 'Deals', 'post type general name', 'orbis-deals' ),
+				'singular_name'      => _x( 'Deal', 'post type singular name', 'orbis-deals' ),
+				'add_new'            => __( 'Add New', 'orbis-deals' ),
+				'add_new_item'       => __( 'Add New Deal', 'orbis-deals' ),
+				'edit_item'          => __( 'Edit Deal', 'orbis-deals' ),
+				'new_item'           => __( 'New Deal', 'orbis-deals' ),
+				'view_item'          => __( 'View Deal', 'orbis-deals' ),
+				'search_items'       => __( 'Search Deals', 'orbis-deals' ),
+				'not_found'          => __( 'No deals found', 'orbis-deals' ),
+				'not_found_in_trash' => __( 'No deals found in Trash', 'orbis-deals' ),
+				'parent_item_colon'  => __( 'Parent Deals:', 'orbis-deals' ),
+				'menu_name'          => __( 'Deals', 'orbis-deals' ),
 			),
 			'public'        => true,
 			'menu_position' => 30,
@@ -28,7 +28,7 @@ function orbis_deals_create_initial_post_types() {
 			'supports'      => array( 'title', 'editor', 'author', 'comments' ),
 			'has_archive'   => true,
 			'rewrite'       => array(
-				'slug' => _x( 'deals', 'slug', 'orbis_deals' ),
+				'slug' => _x( 'deals', 'slug', 'orbis-deals' ),
 			),
 		)
 	);
@@ -42,7 +42,7 @@ add_action( 'init', 'orbis_deals_create_initial_post_types', 0 ); // highest pri
 function orbis_deals_add_meta_boxes() {
 	add_meta_box(
 		'orbis_deal_details',
-		__( 'Deal Details', 'orbis_deals' ),
+		__( 'Deal Details', 'orbis-deals' ),
 		'orbis_deal_details_meta_box',
 		'orbis_deal',
 		'normal',
@@ -185,7 +185,7 @@ function orbis_deal_status_update( $post_id, $status_old, $status_new ) {
 
 	$comment_content = sprintf(
 		/* translators: title of post, status(won, lost), name of user */
-		__( "The deal '%1\$s' was marked '%2\$s' by %3\$s.", 'orbis_deals' ),
+		__( "The deal '%1\$s' was marked '%2\$s' by %3\$s.", 'orbis-deals' ),
 		get_the_title( $post_id ),
 		orbis_deal_get_status_label( $status_new ),
 		$user->display_name
@@ -209,13 +209,13 @@ add_action( 'orbis_deal_status_update', 'orbis_deal_status_update', 10, 3 );
 function orbis_deal_edit_columns( $columns ) {
 	return array(
 		'cb'                 => '<input type="checkbox" />',
-		'title'              => __( 'Title', 'orbis_deals' ),
-		'orbis_deal_company' => __( 'Company', 'orbis_deals' ),
-		'orbis_deal_price'   => __( 'Price', 'orbis_deals' ),
-		'orbis_deal_status'  => __( 'Status', 'orbis_deals' ),
-		'author'             => __( 'Author', 'orbis_deals' ),
-		'comments'           => __( 'Comments', 'orbis_deals' ),
-		'date'               => __( 'Date', 'orbis_deals' ),
+		'title'              => __( 'Title', 'orbis-deals' ),
+		'orbis_deal_company' => __( 'Company', 'orbis-deals' ),
+		'orbis_deal_price'   => __( 'Price', 'orbis-deals' ),
+		'orbis_deal_status'  => __( 'Status', 'orbis-deals' ),
+		'author'             => __( 'Author', 'orbis-deals' ),
+		'comments'           => __( 'Comments', 'orbis-deals' ),
+		'date'               => __( 'Date', 'orbis-deals' ),
 	);
 }
 

@@ -20,4 +20,22 @@
 
 		<exclude name="WordPressVIPMinimum.Hooks.PreGetPosts.PreGetPosts" />
 	</rule>
+
+	<rule ref="WordPress.Utils.I18nTextDomainFixer">
+		<properties>
+			<property name="old_text_domain" type="array">
+				<element value="orbis_deals" />
+			</property>
+
+			<property name="new_text_domain" value="orbis-deals" />
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="orbis-deals" />
+			</property>
+		</properties>
+	</rule>
 </ruleset>

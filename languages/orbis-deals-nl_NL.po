@@ -1,39 +1,175 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Orbis Deals\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/orbis-deals\n"
-"POT-Creation-Date: 2014-03-05 14:59:01+00:00\n"
-"PO-Revision-Date: 2014-03-05 15:59+0100\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/orbis-deals\n"
+"POT-Creation-Date: 2023-10-13T09:10:56+00:00\n"
+"PO-Revision-Date: 2023-10-13 11:15+0200\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:2c,1;esc_attr__\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: __;_e;_x:2c,1;esc_attr__\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.6.4\n"
-"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 3.4\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/meta-box-deal-details.php:15
+#. Plugin Name of the plugin
+msgid "Orbis Deals"
+msgstr "Orbis Deals"
+
+#. Plugin URI of the plugin
+msgid "http://www.happywp.com/plugins/orbis-deals/"
+msgstr "http://www.happywp.com/plugins/orbis-deals/"
+
+#. Description of the plugin
+msgid ""
+"The Orbis Deals plugin extends your Orbis environment with the option to add "
+"deals."
+msgstr ""
+"De Orbis deals plugin breidt je Orbis omgeving uit met de optie om deals toe "
+"te voegen."
+
+#. Author of the plugin
+msgid "Pronamic"
+msgstr "Pronamic"
+
+#. Author URI of the plugin
+msgid "http://www.pronamic.eu/"
+msgstr "http://www.pronamic.eu/"
+
+#: admin/meta-box-deal-details.php:17
 msgid "Company ID"
 msgstr "Bedrijf ID"
 
-#: admin/meta-box-deal-details.php:18
-msgid "Select Company"
-msgstr "Selecteer bedrijf"
-
-#: admin/meta-box-deal-details.php:23 includes/post.php:163
-#: templates/deal-details.php:28
+#: admin/meta-box-deal-details.php:29 includes/post.php:214
+#: templates/deal-details.php:39
 msgid "Price"
 msgstr "Prijs"
 
-#: admin/meta-box-deal-details.php:31 includes/post.php:164
-#: templates/deal-details.php:33
+#: admin/meta-box-deal-details.php:37 includes/post.php:215
+#: templates/deal-details.php:44
 msgid "Status"
 msgstr "Status"
+
+#: admin/meta-box-deal-details.php:79 templates/deal-lines.php:21
+msgid "Quantity"
+msgstr "Aantal"
+
+#: admin/meta-box-deal-details.php:80 templates/deal-lines.php:20
+msgid "Description"
+msgstr "Beschrijving"
+
+#: admin/meta-box-deal-details.php:81 templates/deal-lines.php:22
+msgid "Amount"
+msgstr "Bedrag"
+
+#: admin/meta-box-deal-details.php:82 templates/deal-lines.php:24
+msgid "Recurrence"
+msgstr "Herhaling"
+
+#: admin/meta-box-deal-details.php:104
+msgid "None"
+msgstr "Geen"
+
+#: admin/meta-box-deal-details.php:105 templates/deal-lines.php:57
+msgid "Annual"
+msgstr "Jaarlijks"
+
+#: admin/meta-box-deal-details.php:106 templates/deal-lines.php:61
+msgid "Monthly"
+msgstr "Maandelijks"
+
+#: classes/orbis-deals-plugin.php:33 templates/deal-details.php:56
+msgid "Companies"
+msgstr "Bedrijven"
+
+#: classes/orbis-deals-plugin.php:34 classes/orbis-deals-plugin.php:63
+#: includes/post.php:10 includes/post.php:23
+msgid "Deals"
+msgstr "Deals"
+
+#: classes/orbis-deals-plugin.php:37 classes/orbis-deals-plugin.php:66
+msgid "Deal"
+msgstr "Deal"
+
+#: classes/orbis-deals-plugin.php:38 classes/orbis-deals-plugin.php:67
+msgid "Search deal"
+msgstr "Zoek deal"
+
+#: classes/orbis-deals-plugin.php:39 classes/orbis-deals-plugin.php:68
+msgid "No deals found."
+msgstr "Geen deals gevonden."
+
+#: classes/orbis-deals-plugin.php:40 classes/orbis-deals-plugin.php:69
+msgid "Add Deal"
+msgstr "Deal toevoegen"
+
+#: classes/orbis-deals-plugin.php:41 classes/orbis-deals-plugin.php:70
+#: includes/post.php:17
+msgid "New Deal"
+msgstr "Nieuwe deal"
+
+#: classes/orbis-deals-plugin.php:42 classes/orbis-deals-plugin.php:71
+#: includes/post.php:15
+msgid "Add New Deal"
+msgstr "Nieuwe deal toevoegen"
+
+#: classes/orbis-deals-plugin.php:45 includes/post.php:213
+#: templates/deal-details.php:29
+msgid "Company"
+msgstr "Bedrijf"
+
+#: classes/orbis-deals-plugin.php:46
+msgid "Search company"
+msgstr "Zoek bedrijf"
+
+#: classes/orbis-deals-plugin.php:47
+msgid "No companies found."
+msgstr "Geen bedrijven gevonden."
+
+#: classes/orbis-deals-plugin.php:48
+msgid "Add Company"
+msgstr "Bedrijf toevoegen"
+
+#: classes/orbis-deals-plugin.php:49
+msgid "New Company"
+msgstr "Nieuw bedrijf"
+
+#: classes/orbis-deals-plugin.php:50
+msgid "Add New Company"
+msgstr "Nieuwe bedrijf toevoegen"
+
+#: classes/orbis-deals-plugin.php:62 templates/deal-details.php:76
+msgid "Persons"
+msgstr "Personen"
+
+#: classes/orbis-deals-plugin.php:74
+msgid "Person"
+msgstr "Persoon"
+
+#: classes/orbis-deals-plugin.php:75
+msgid "Search person"
+msgstr "Zoek persoon"
+
+#: classes/orbis-deals-plugin.php:76
+msgid "No persons found."
+msgstr "Geen personen gevonden."
+
+#: classes/orbis-deals-plugin.php:77
+msgid "Add Person"
+msgstr "Persoon toevoegen"
+
+#: classes/orbis-deals-plugin.php:78
+msgid "New Person"
+msgstr "Nieuwe persoon"
+
+#: classes/orbis-deals-plugin.php:79
+msgid "Add New Person"
+msgstr "Nieuwe persoon toevoegen"
 
 #: includes/functions.php:10
 msgid "Pending"
@@ -47,25 +183,23 @@ msgstr "Gewonnen"
 msgid "Lost"
 msgstr "Verloren"
 
-#: includes/post.php:10 includes/post.php:23
+#: includes/post.php:12
+msgctxt "post type general name"
 msgid "Deals"
 msgstr "Deals"
+
+#: includes/post.php:13
+msgctxt "post type singular name"
+msgid "Deal"
+msgstr "Deal"
 
 #: includes/post.php:14
 msgid "Add New"
 msgstr "Nieuwe deal"
 
-#: includes/post.php:15
-msgid "Add New Deal"
-msgstr "Nieuwe deal toevoegen"
-
 #: includes/post.php:16
 msgid "Edit Deal"
 msgstr "Deal bewerken"
-
-#: includes/post.php:17
-msgid "New Deal"
-msgstr "Nieuwe deal"
 
 #: includes/post.php:18
 msgid "View Deal"
@@ -87,75 +221,77 @@ msgstr "Geen deals gevonden in de prullenbak"
 msgid "Parent Deals:"
 msgstr "Bovenliggende deal:"
 
-#: includes/post.php:45 templates/deal-details.php:18
-msgid "Deal Details"
-msgstr "Deal details"
-
-#: includes/post.php:137
-msgid "The deal '%s' was marked '%s' by %s."
-msgstr "Deze deal '%s' was gemarkeerd als '%s' door %s."
-
-#: includes/post.php:161
-msgid "Title"
-msgstr "Titel"
-
-#: includes/post.php:162 templates/deal-details.php:23
-msgid "Company"
-msgstr "Bedrijf"
-
-#: includes/post.php:165
-msgid "Author"
-msgstr "Auteur"
-
-#: includes/post.php:166
-msgid "Comments"
-msgstr "Reacties"
-
-#: includes/post.php:167
-msgid "Date"
-msgstr "Datum"
-
-#. Plugin Name of the plugin/theme
-msgid "Orbis Deals"
-msgstr "Orbis deals"
-
-#. Plugin URI of the plugin/theme
-msgid "http://www.happywp.com/plugins/orbis-deals/"
-msgstr "http://www.happywp.com/plugins/orbis-deals/"
-
-#. Description of the plugin/theme
-msgid ""
-"The Orbis Deals plugin extends your Orbis environment with the option to add "
-"deals."
-msgstr ""
-"De Orbis deals plugin breidt je Orbis omgeving uit met de optie om deals toe "
-"te voegen."
-
-#. Author of the plugin/theme
-msgid "Pronamic"
-msgstr "Pronamic"
-
-#. Author URI of the plugin/theme
-msgid "http://www.pronamic.eu/"
-msgstr "http://www.pronamic.eu/"
-
-#: includes/post.php:12
-msgctxt "post type general name"
-msgid "Deals"
-msgstr "Deals"
-
-#: includes/post.php:13
-msgctxt "post type singular name"
-msgid "Deal"
-msgstr "Deal"
-
 #: includes/post.php:31
 msgctxt "slug"
 msgid "deals"
 msgstr "deals"
 
-#~ msgid "Person"
-#~ msgstr "Persoon"
+#: includes/post.php:45 templates/deal-details.php:24
+msgid "Deal Details"
+msgstr "Deal details"
+
+#. translators: title of post, status(won, lost), name of user
+#: includes/post.php:188
+msgid "The deal '%1$s' was marked '%2$s' by %3$s."
+msgstr "De deal ‘%1$s’ is door %3$s gemarkeerd als ‘%2$s’."
+
+#: includes/post.php:212
+msgid "Title"
+msgstr "Titel"
+
+#: includes/post.php:216
+msgid "Author"
+msgstr "Auteur"
+
+#: includes/post.php:217
+msgid "Comments"
+msgstr "Reacties"
+
+#: includes/post.php:218
+msgid "Date"
+msgstr "Datum"
+
+#: includes/rest.php:30 includes/rest.php:48
+msgid "Deal post ID."
+msgstr "Deal post ID."
+
+#: includes/rest.php:52
+msgid "Contains the deal lines."
+msgstr "Bevat de deal regels."
+
+#: includes/rest.php:58
+msgid "Quantity."
+msgstr "Aantal."
+
+#: includes/rest.php:63
+msgid "Description."
+msgstr "Beschrijving."
+
+#: includes/rest.php:68
+msgid "Amount."
+msgstr "Bedrag."
+
+#: includes/rest.php:73
+msgid "Recurrence."
+msgstr "Herhaling."
+
+#: templates/deal-details.php:34 templates/deal-details.php:36
+msgid "Agreement Form"
+msgstr "Akkoordformulier"
+
+#: templates/deal-lines.php:23
+msgid "Total"
+msgstr "Totaal"
+
+#: templates/deal-lines.php:65
+msgid "One-time"
+msgstr "Eenmalig"
+
+#~ msgid "Select Company"
+#~ msgstr "Selecteer bedrijf"
+
+#~ msgid "The deal '%s' was marked '%s' by %s."
+#~ msgstr "Deze deal '%s' was gemarkeerd als '%s' door %s."
 
 #~ msgid "Orbis ID"
 #~ msgstr "Orbis ID"
@@ -379,9 +515,6 @@ msgstr "deals"
 #~ msgid "Yearly"
 #~ msgstr "Jaarlijks"
 
-#~ msgid "Monthly"
-#~ msgstr "Maandelijks"
-
 #~ msgid "No reminders sent in the last week"
 #~ msgstr "Geen herinneringen verzonden afgelopen week"
 
@@ -396,9 +529,6 @@ msgstr "deals"
 
 #~ msgid "Expired"
 #~ msgstr "Verlopen"
-
-#~ msgid "Total"
-#~ msgstr "Totaal"
 
 #~ msgid "Expire Rate"
 #~ msgstr "Vervalratio"
@@ -534,9 +664,6 @@ msgstr "deals"
 
 #~ msgid "Number"
 #~ msgstr "Aantal"
-
-#~ msgid "Persons"
-#~ msgstr "Personen"
 
 #~ msgid "Expiring licenses"
 #~ msgstr "Aflopende licenties"
@@ -753,15 +880,9 @@ msgstr "deals"
 #~ msgid "Category"
 #~ msgstr "Categorie"
 
-#~ msgid "Companies"
-#~ msgstr "Bedrijven"
-
 #~ msgctxt "orbis_company"
 #~ msgid "Add New"
 #~ msgstr "Nieuw bedrijf"
-
-#~ msgid "Add New Company"
-#~ msgstr "Nieuwe bedrijf toevoegen"
 
 #~ msgid "Edit Company"
 #~ msgstr "Bedrijf bewerken"
@@ -774,9 +895,6 @@ msgstr "deals"
 
 #~ msgid "Search Companies"
 #~ msgstr "Zoek bedrijven"
-
-#~ msgid "No companies found."
-#~ msgstr "Geen bedrijven gevonden."
 
 #~ msgid "No companies found in Trash."
 #~ msgstr "Geen bedrijven gevonden in prullenbak."
@@ -955,9 +1073,6 @@ msgstr "deals"
 
 #~ msgid "Edit Company Post"
 #~ msgstr "Bewerk bedrijf bericht"
-
-#~ msgid "Add Company"
-#~ msgstr "Bedrijf toevoegen"
 
 #~ msgid "Request password."
 #~ msgstr "Verzoek wachtwoord."
