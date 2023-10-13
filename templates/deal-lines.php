@@ -17,11 +17,11 @@ $total = new Money();
 <table class="table table-striped table-sm">
 	<thead>
 		<tr>
-			<th scope="col"><?php \esc_html_e( 'Quantity', 'orbis-deals' ); ?></th>
 			<th scope="col"><?php \esc_html_e( 'Description', 'orbis-deals' ); ?></th>
+			<th scope="col"><?php \esc_html_e( 'Quantity', 'orbis-deals' ); ?></th>
 			<th scope="col"><?php \esc_html_e( 'Amount', 'orbis-deals' ); ?></th>
-			<th scope="col"><?php \esc_html_e( 'Recurrence', 'orbis-deals' ); ?></th>
 			<th scope="col"><?php \esc_html_e( 'Total', 'orbis-deals' ); ?></th>
+			<th scope="col"><?php \esc_html_e( 'Recurrence', 'orbis-deals' ); ?></th>
 		</tr>
 	</thead>
 
@@ -38,13 +38,16 @@ $total = new Money();
 
 				?>
 				<td>
-					<?php echo \esc_html( number_format_i18n( $line->quantity ) ); ?> ×
-				</td>
-				<td>
 					<?php echo \esc_html( $line->description ); ?>
 				</td>
 				<td>
+					<?php echo \esc_html( number_format_i18n( $line->quantity ) ); ?> ×
+				</td>
+				<td>
 					<?php echo \esc_html( $line_amount->format_i18n() ); ?>
+				</td>
+				<td>
+					<?php echo \esc_html( $line_total->format_i18n() ); ?>
 				</td>
 				<td>
 					<?php
@@ -52,6 +55,10 @@ $total = new Money();
 					switch ( $line->recurrence ) {
 						case 'annual':
 							\esc_html_e( 'Annual', 'orbis-deals' );
+
+							break;
+						case 'monthly':
+							\esc_html_e( 'Monthly', 'orbis-deals' );
 
 							break;
 						case 'none':
@@ -66,9 +73,6 @@ $total = new Money();
 
 					?>
 				</td>
-				<td>
-					<?php echo \esc_html( $line_total->format_i18n() ); ?>
-				</td>
 			</tr>
 
 		<?php endforeach; ?>
@@ -80,10 +84,10 @@ $total = new Money();
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
 			<td>
 				<?php echo \esc_html( $total->format_i18n() ); ?>
 			</td>
+			<td></td>
 		</tr>
 	</tfoot>
 </table>
