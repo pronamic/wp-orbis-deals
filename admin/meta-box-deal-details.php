@@ -101,8 +101,9 @@ $lines[] = $new_line;
 					<?php
 
 					$options = [
-						'none'   => __( 'None', 'orbis_deals' ),
-						'annual' => __( 'Annual', 'orbis_deals' ),
+						'none'    => __( 'None', 'orbis_deals' ),
+						'annual'  => __( 'Annual', 'orbis_deals' ),
+						'monthly' => __( 'Monthly', 'orbis_deals' ),
 					];
 
 					?>
