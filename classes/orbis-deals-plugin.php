@@ -15,10 +15,6 @@ class Orbis_Deals_Plugin extends Orbis_Plugin {
 		add_action( 'p2p_init', array( $this, 'p2p_init' ) );
 	}
 
-	public function loaded() {
-		$this->load_textdomain( 'orbis-deals', '/languages/' );
-	}
-
 	/**
 	 * Posts to posts initialize
 	 */
