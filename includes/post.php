@@ -116,7 +116,7 @@ function orbis_save_deal_details( $post_id, $post ) {
 
 	if ( array_key_exists( 'orbis_deal_lines', $_POST ) ) {
 		$lines = array_map(
-			function( $line ) {
+			function ( $line ) {
 				$quantity    = 0;
 				$description = '';
 				$amount      = 0;
@@ -289,7 +289,7 @@ add_filter( 'query_vars', 'orbis_deals_query_vars' );
 
 add_filter(
 	'the_content',
-	function( $content ) {
+	function ( $content ) {
 		if ( 'orbis_deal' !== get_post_type() ) {
 			return $content;
 		}

@@ -22,7 +22,7 @@ class Orbis_Deals_RestController {
 			[
 				'methods'             => 'GET',
 				'callback'            => [ $this, 'rest_api_get' ],
-				'permission_callback' => function() {
+				'permission_callback' => function () {
 					return true;
 				},
 				'args'                => [
@@ -30,7 +30,7 @@ class Orbis_Deals_RestController {
 						'description' => \__( 'Deal post ID.', 'orbis-deals' ),
 						'type'        => 'integer',
 					],
-				]
+				],
 			]
 		);
 
@@ -40,7 +40,7 @@ class Orbis_Deals_RestController {
 			[
 				'methods'             => 'POST',
 				'callback'            => [ $this, 'rest_api_update' ],
-				'permission_callback' => function() {
+				'permission_callback' => function () {
 					return true;
 				},
 				'args'                => [
@@ -64,12 +64,12 @@ class Orbis_Deals_RestController {
 									'type'        => 'string',
 									'required'    => false,
 								],
-								'amount' => [
+								'amount'      => [
 									'description' => \__( 'Amount.', 'orbis-deals' ),
 									'type'        => 'number',
 									'required'    => false,
 								],
-								'recurrence' => [
+								'recurrence'  => [
 									'description' => \__( 'Recurrence.', 'pronamic-twinfield' ),
 									'type'        => 'string',
 									'enum'        => [
@@ -79,10 +79,10 @@ class Orbis_Deals_RestController {
 									],
 									'required'    => false,
 								],
-							]
+							],
 						],
-					]
-				]
+					],
+				],
 			]
 		);
 	}
@@ -182,7 +182,7 @@ class Orbis_Deals_RestController {
 
 		$lines = array_filter(
 			$lines,
-			function( $line ) {
+			function ( $line ) {
 				$line = (object) $line;
 
 				if ( 0 !== $line->quantity ) {

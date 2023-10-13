@@ -89,13 +89,13 @@ $lines[] = $new_line;
 
 			<tr>
 				<td>
-					<input type="number" name="orbis_deal_lines[<?php echo esc_attr( $key ) ; ?>][quantity]" value="<?php echo esc_attr( $line->quantity ); ?>">
+					<input type="number" name="orbis_deal_lines[<?php echo esc_attr( $key ); ?>][quantity]" value="<?php echo esc_attr( $line->quantity ); ?>">
 				</td>
 				<td>
-					<input type="text" name="orbis_deal_lines[<?php echo esc_attr( $key ) ; ?>][description]" value="<?php echo esc_attr( $line->description ); ?>">
+					<input type="text" name="orbis_deal_lines[<?php echo esc_attr( $key ); ?>][description]" value="<?php echo esc_attr( $line->description ); ?>">
 				</td>
 				<td>
-					<input type="number" name="orbis_deal_lines[<?php echo esc_attr( $key ) ; ?>][amount]" min="0" step="0.01" value="<?php echo esc_attr( $line->amount ); ?>">
+					<input type="number" name="orbis_deal_lines[<?php echo esc_attr( $key ); ?>][amount]" min="0" step="0.01" value="<?php echo esc_attr( $line->amount ); ?>">
 				</td>
 				<td>
 					<?php
@@ -107,7 +107,7 @@ $lines[] = $new_line;
 					];
 
 					?>
-					<select name="orbis_deal_lines[<?php echo esc_attr( $key ) ; ?>][recurrence]">
+					<select name="orbis_deal_lines[<?php echo esc_attr( $key ); ?>][recurrence]">
 						<?php
 
 						foreach ( $options as $value => $label ) {

@@ -28,7 +28,7 @@ $url_agreement_form = add_query_arg(
 			<dl>
 				<dt><?php esc_html_e( 'Company', 'orbis_deals' ); ?></dt>
 				<dd>
-					<a href="<?php echo esc_attr( get_permalink( $company_post_id ) ); ?>"><?php orbis_deal_the_company_name(); ?></a>
+					<a href="<?php echo \esc_url( get_permalink( $company_post_id ) ); ?>"><?php orbis_deal_the_company_name(); ?></a>
 				</dd>
 
 				<dt><?php esc_html_e( 'Agreement Form', 'orbis_deals' ); ?></dt>

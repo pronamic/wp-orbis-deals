@@ -1,11 +1,13 @@
 {
     "config": {
-        "wp-slug": "orbis-deals"
+        "wp-slug": "orbis-deals",
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "3.2.3",
-        "wp-coding-standards/wpcs": "0.14.1",
-        "pronamic/pronamic-cli": "^1.0"
+        "pronamic/pronamic-cli": "^1.0",
+        "pronamic/wp-coding-standards": "^2.0"
     },
     "scripts": {
         "build": "vendor/bin/pronamic wp-build",

@@ -50,7 +50,7 @@ function orbis_deal_the_price() {
 
 	$price = new Money( $value, 'EUR' );
 
-	echo $price->format_i18n();
+	echo \esc_html( $price->format_i18n() );
 }
 
 /**
