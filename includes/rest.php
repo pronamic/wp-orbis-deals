@@ -75,6 +75,7 @@ class Orbis_Deals_RestController {
 									'enum'        => [
 										'none',
 										'annual',
+										'monthly',
 									],
 									'required'    => false,
 								],
