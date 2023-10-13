@@ -16,7 +16,7 @@ class Orbis_Deals_Plugin extends Orbis_Plugin {
 	}
 
 	public function loaded() {
-		$this->load_textdomain( 'orbis_deals', '/languages/' );
+		$this->load_textdomain( 'orbis-deals', '/languages/' );
 	}
 
 	/**
