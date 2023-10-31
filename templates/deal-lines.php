@@ -40,11 +40,11 @@ $total = new Money();
 				<td>
 					<?php 
 
-					if ( '' === $line->link ) {
+					if ( '' === (string) $line->link ) {
 						echo \esc_html( $line->description );
 					}
 
-					if ( '' !== $line->link ) {
+					if ( '' !== (string) $line->link ) {
 						\printf(
 							'<a href="%s">%s</a>',
 							\esc_url( $line->link ),
