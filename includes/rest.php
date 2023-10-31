@@ -64,6 +64,12 @@ class Orbis_Deals_RestController {
 									'type'        => 'string',
 									'required'    => false,
 								],
+								'link'        => [
+									'description' => \__( 'Link.', 'orbis-deals' ),
+									'type'        => 'string',
+									'format'      => 'uri',
+									'required'    => false,
+								],
 								'amount'      => [
 									'description' => \__( 'Amount.', 'orbis-deals' ),
 									'type'        => 'number',
@@ -190,6 +196,10 @@ class Orbis_Deals_RestController {
 				}
 
 				if ( '' !== $line->description ) {
+					return true;
+				}
+
+				if ( '' !== $line->link ) {
 					return true;
 				}
 

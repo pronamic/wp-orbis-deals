@@ -119,6 +119,7 @@ function orbis_save_deal_details( $post_id, $post ) {
 			function ( $line ) {
 				$quantity    = 0;
 				$description = '';
+				$link        = '';
 				$amount      = 0;
 				$recurrence  = 'none';
 
@@ -128,6 +129,10 @@ function orbis_save_deal_details( $post_id, $post ) {
 
 				if ( array_key_exists( 'description', $line ) ) {
 					$description = sanitize_text_field( $line['description'] );
+				}
+
+				if ( array_key_exists( 'link', $line ) ) {
+					$link = sanitize_url( $line['link'] );
 				}
 
 				if ( array_key_exists( 'amount', $line ) ) {
@@ -143,6 +148,7 @@ function orbis_save_deal_details( $post_id, $post ) {
 				return (object) [
 					'quantity'    => $quantity,
 					'description' => $description,
+					'link'        => $link,
 					'amount'      => $amount,
 					'recurrence'  => $recurrence,
 				];

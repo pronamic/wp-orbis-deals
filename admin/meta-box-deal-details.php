@@ -62,6 +62,7 @@ $lines = (array) json_decode( get_post_meta( $post->ID, '_orbis_deal_lines', tru
 $new_line = (object) [
 	'quantity'    => '',
 	'description' => '',
+	'link'        => '',
 	'amount'      => '',
 	'period'      => '',
 ];
@@ -78,6 +79,7 @@ $lines[] = $new_line;
 		<tr>
 			<th scope="col"><?php esc_html_e( 'Quantity', 'orbis-deals' ); ?></th>
 			<th scope="col"><?php esc_html_e( 'Description', 'orbis-deals' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Link', 'orbis-deals' ); ?></th>
 			<th scope="col"><?php esc_html_e( 'Amount', 'orbis-deals' ); ?></th>
 			<th scope="col"><?php esc_html_e( 'Recurrence', 'orbis-deals' ); ?></th>
 		</tr>
@@ -93,6 +95,9 @@ $lines[] = $new_line;
 				</td>
 				<td>
 					<input type="text" name="orbis_deal_lines[<?php echo esc_attr( $key ); ?>][description]" value="<?php echo esc_attr( $line->description ); ?>">
+				</td>
+				<td>
+					<input type="url" name="orbis_deal_lines[<?php echo esc_attr( $key ); ?>][link]" value="<?php echo esc_attr( $line->link ); ?>">
 				</td>
 				<td>
 					<input type="number" name="orbis_deal_lines[<?php echo esc_attr( $key ); ?>][amount]" min="0" step="0.01" value="<?php echo esc_attr( $line->amount ); ?>">

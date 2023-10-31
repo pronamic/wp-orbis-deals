@@ -38,7 +38,21 @@ $total = new Money();
 
 				?>
 				<td>
-					<?php echo \esc_html( $line->description ); ?>
+					<?php 
+
+					if ( '' === $line->link ) {
+						echo \esc_html( $line->description );
+					}
+
+					if ( '' !== $line->link ) {
+						\printf(
+							'<a href="%s">%s</a>',
+							\esc_url( $line->link ),
+							\esc_html( $line->description )
+						);
+					}
+
+					?>
 				</td>
 				<td>
 					<?php echo \esc_html( number_format_i18n( $line->quantity ) ); ?> ×
