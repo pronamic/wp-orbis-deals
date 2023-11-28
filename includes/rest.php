@@ -211,6 +211,6 @@ class Orbis_Deals_RestController {
 			}
 		);
 
-		update_post_meta( $post_id, '_orbis_deal_lines', wp_json_encode( $lines ) );
+		update_post_meta( $post_id, '_orbis_deal_lines', wp_slash( wp_json_encode( $lines ) ) );
 	}
 }
