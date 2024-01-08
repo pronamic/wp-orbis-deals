@@ -18,6 +18,14 @@ License: Copyright (c) Pronamic
 GitHub URI: https://github.com/pronamic/wp-orbis-deals
 */
 
+/**
+ * Autoload.
+ */
+require_once __DIR__ . '/vendor/autoload_packages.php';
+
+/**
+ * Bootstrap.
+ */
 function orbis_deals_bootstrap() {
 	// Classes
 	require_once 'classes/orbis-deals-plugin.php';

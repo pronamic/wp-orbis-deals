@@ -6,7 +6,8 @@
     "config": {
         "wp-slug": "orbis-deals",
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "automattic/jetpack-autoloader": true
         }
     },
     "require-dev": {
@@ -22,5 +23,8 @@
             "rsync --recursive --delete --verbose ./build/project/languages/ ./languages/"  
         ],
         "version": "@build"
+    },
+    "require": {
+        "automattic/jetpack-autoloader": "^3.0"
     }
 }
