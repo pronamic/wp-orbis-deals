@@ -1,22 +1,28 @@
 <?php
-/*
-Plugin Name: Orbis Deals
-Plugin URI: http://www.happywp.com/plugins/orbis-deals/
-Description: The Orbis Deals plugin extends your Orbis environment with the option to add deals.
-
-Version: 1.0.0
-Requires at least: 3.5
-
-Author: Pronamic
-Author URI: http://www.pronamic.eu/
-
-Text Domain: orbis-deals
-Domain Path: /languages/
-
-License: Copyright (c) Pronamic
-
-GitHub URI: https://github.com/pronamic/wp-orbis-deals
-*/
+/**
+ * Orbis Deals
+ *
+ * @package   Pronamic\Orbis\Deals
+ * @author    Pronamic
+ * @copyright 2024 Pronamic
+ * @license   GPL-2.0-or-later
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Orbis Deals
+ * Plugin URI:        https://wp.pronamic.directory/plugins/orbis-deals/
+ * Description:       The Orbis Deals plugin extends your Orbis environment with the option to add deals.
+ * Version:           1.0.0
+ * Requires at least: 5.2
+ * Requires PHP:      7.2
+ * Author:            Pronamic
+ * Author URI:        https://www.pronamic.eu/
+ * Text Domain:       orbis-deals
+ * Domain Path:       /languages/
+ * License:           GPL v2 or later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Update URI:        https://wp.pronamic.directory/plugins/orbis-deals/
+ * GitHub URI:        https://github.com/pronamic/wp-orbis-deals
+ */
 
 /**
  * Autoload.
