@@ -32,6 +32,13 @@ require_once __DIR__ . '/vendor/autoload_packages.php';
 /**
  * Bootstrap.
  */
+add_action(
+	'plugins_loaded',
+	function () {
+		load_plugin_textdomain( 'orbis-deals', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+	}
+);
+
 function orbis_deals_bootstrap() {
 	// Classes
 	require_once 'classes/orbis-deals-plugin.php';
@@ -53,13 +60,3 @@ function orbis_deals_bootstrap() {
 }
 
 add_action( 'plugins_loaded', 'orbis_deals_bootstrap' );
-
-/**
- * Bootstrap.
- */
-add_action(
-	'plugins_loaded',
-	function () {
-		load_plugin_textdomain( 'orbis-deals', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
-	}
-);
