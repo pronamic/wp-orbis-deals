@@ -1,6 +1,8 @@
 {
     "name": "pronamic/wp-orbis-deals",
     "description": "The Orbis Deals plugin extends your Orbis environment with the option to add deals.",
+    "license": "GPL-2.0-or-later",
+    "type": "wordpress-plugin",
     "config": {
         "wp-slug": "orbis-deals",
         "allow-plugins": {
