@@ -32,6 +32,6 @@
   },
   "homepage": "https://github.com/pronamic/wp-orbis-deals",
   "devDependencies": {
-    "@wordpress/env": "^8.2.0"
+    "@wordpress/env": "^10.37.0"
   }
 }
