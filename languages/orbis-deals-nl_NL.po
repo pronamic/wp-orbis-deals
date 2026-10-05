@@ -2,18 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis Deals\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/orbis-deals\n"
+"POT-Creation-Date: 2023-10-13T09:16:49+00:00\n"
+"PO-Revision-Date: 2026-10-05 20:39+0200\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-10-13T09:16:49+00:00\n"
-"PO-Revision-Date: 2026-10-05T18:36:23+00:00\n"
-"Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-KeywordsList: __;_e;_x:2c,1;esc_attr__\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -25,7 +25,7 @@ msgstr "Orbis Deals"
 #. Plugin URI of the plugin
 #: orbis-deals.php:12
 msgid "https://wp.pronamic.directory/plugins/orbis-deals/"
-msgstr ""
+msgstr "https://wp.pronamic.directory/plugins/orbis-deals/"
 
 #. Description of the plugin
 #: orbis-deals.php:13
@@ -40,47 +40,39 @@ msgstr "Pronamic"
 #. Author URI of the plugin
 #: orbis-deals.php:18
 msgid "https://www.pronamic.eu/"
-msgstr ""
+msgstr "https://www.pronamic.nl/"
 
 #: admin/meta-box-deal-details.php:17
 msgid "Organization ID"
 msgstr "Organisatie-ID"
 
-#: admin/meta-box-deal-details.php:29
-#: includes/post.php:220
-#: templates/archive-orbis_deal.php:34
-#: templates/deal-details.php:39
+#: admin/meta-box-deal-details.php:29 includes/post.php:220
+#: templates/archive-orbis_deal.php:34 templates/deal-details.php:39
 msgid "Price"
 msgstr "Prijs"
 
-#: admin/meta-box-deal-details.php:37
-#: includes/post.php:221
-#: templates/archive-orbis_deal.php:35
-#: templates/deal-details.php:44
+#: admin/meta-box-deal-details.php:37 includes/post.php:221
+#: templates/archive-orbis_deal.php:35 templates/deal-details.php:44
 msgid "Status"
 msgstr "Status"
 
-#: admin/meta-box-deal-details.php:80
-#: templates/deal-lines.php:21
+#: admin/meta-box-deal-details.php:80 templates/deal-lines.php:21
 msgid "Quantity"
 msgstr "Aantal"
 
-#: admin/meta-box-deal-details.php:81
-#: templates/deal-lines.php:20
+#: admin/meta-box-deal-details.php:81 templates/deal-lines.php:20
 msgid "Description"
 msgstr "Beschrijving"
 
 #: admin/meta-box-deal-details.php:82
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
-#: admin/meta-box-deal-details.php:83
-#: templates/deal-lines.php:22
+#: admin/meta-box-deal-details.php:83 templates/deal-lines.php:22
 msgid "Amount"
 msgstr "Bedrag"
 
-#: admin/meta-box-deal-details.php:84
-#: templates/deal-lines.php:24
+#: admin/meta-box-deal-details.php:84 templates/deal-lines.php:24
 msgid "Recurrence"
 msgstr "Herhaling"
 
@@ -88,64 +80,51 @@ msgstr "Herhaling"
 msgid "None"
 msgstr "Geen"
 
-#: admin/meta-box-deal-details.php:110
-#: templates/deal-lines.php:71
+#: admin/meta-box-deal-details.php:110 templates/deal-lines.php:71
 msgid "Annual"
 msgstr "Jaarlijks"
 
-#: admin/meta-box-deal-details.php:111
-#: templates/deal-lines.php:75
+#: admin/meta-box-deal-details.php:111 templates/deal-lines.php:75
 msgid "Monthly"
 msgstr "Maandelijks"
 
-#: classes/orbis-deals-plugin.php:29
-#: templates/deal-details.php:56
+#: classes/orbis-deals-plugin.php:29 templates/deal-details.php:56
 msgid "Organizations"
 msgstr "Organisaties"
 
-#: classes/orbis-deals-plugin.php:30
-#: classes/orbis-deals-plugin.php:59
-#: includes/post.php:10
-#: includes/post.php:23
+#: classes/orbis-deals-plugin.php:30 classes/orbis-deals-plugin.php:59
+#: includes/post.php:10 includes/post.php:23
 msgid "Deals"
 msgstr "Deals"
 
-#: classes/orbis-deals-plugin.php:33
-#: classes/orbis-deals-plugin.php:62
+#: classes/orbis-deals-plugin.php:33 classes/orbis-deals-plugin.php:62
 msgid "Deal"
 msgstr "Deal"
 
-#: classes/orbis-deals-plugin.php:34
-#: classes/orbis-deals-plugin.php:63
+#: classes/orbis-deals-plugin.php:34 classes/orbis-deals-plugin.php:63
 msgid "Search deal"
 msgstr "Zoek deal"
 
-#: classes/orbis-deals-plugin.php:35
-#: classes/orbis-deals-plugin.php:64
+#: classes/orbis-deals-plugin.php:35 classes/orbis-deals-plugin.php:64
 msgid "No deals found."
 msgstr "Geen deals gevonden."
 
-#: classes/orbis-deals-plugin.php:36
-#: classes/orbis-deals-plugin.php:65
+#: classes/orbis-deals-plugin.php:36 classes/orbis-deals-plugin.php:65
 msgid "Add Deal"
 msgstr "Deal toevoegen"
 
-#: classes/orbis-deals-plugin.php:37
-#: classes/orbis-deals-plugin.php:66
+#: classes/orbis-deals-plugin.php:37 classes/orbis-deals-plugin.php:66
 #: includes/post.php:17
 msgid "New Deal"
 msgstr "Nieuwe deal"
 
-#: classes/orbis-deals-plugin.php:38
-#: classes/orbis-deals-plugin.php:67
+#: classes/orbis-deals-plugin.php:38 classes/orbis-deals-plugin.php:67
 #: includes/post.php:15
 msgid "Add New Deal"
 msgstr "Nieuwe deal toevoegen"
 
-#: classes/orbis-deals-plugin.php:41
-#: includes/post.php:219
-#: templates/archive-orbis_deal.php:32
-#: templates/deal-details.php:29
+#: classes/orbis-deals-plugin.php:41 includes/post.php:219
+#: templates/archive-orbis_deal.php:32 templates/deal-details.php:29
 msgid "Organization"
 msgstr "Organisatie"
 
@@ -169,8 +148,7 @@ msgstr "Nieuwe organisatie"
 msgid "Add New Organization"
 msgstr "Nieuwe organisatie toevoegen"
 
-#: classes/orbis-deals-plugin.php:58
-#: templates/deal-details.php:76
+#: classes/orbis-deals-plugin.php:58 templates/deal-details.php:76
 msgid "Persons"
 msgstr "Personen"
 
@@ -253,8 +231,7 @@ msgctxt "slug"
 msgid "deals"
 msgstr "deals"
 
-#: includes/post.php:45
-#: templates/deal-details.php:24
+#: includes/post.php:45 templates/deal-details.php:24
 msgid "Deal Details"
 msgstr "Deal details"
 
@@ -264,13 +241,11 @@ msgstr "Deal details"
 msgid "The deal '%1$s' was marked '%2$s' by %3$s."
 msgstr "De deal ‘%1$s’ is door %3$s gemarkeerd als ‘%2$s’."
 
-#: includes/post.php:218
-#: templates/archive-orbis_deal.php:33
+#: includes/post.php:218 templates/archive-orbis_deal.php:33
 msgid "Title"
 msgstr "Titel"
 
-#: includes/post.php:222
-#: templates/archive-orbis_deal.php:36
+#: includes/post.php:222 templates/archive-orbis_deal.php:36
 msgid "Author"
 msgstr "Auteur"
 
@@ -278,13 +253,11 @@ msgstr "Auteur"
 msgid "Comments"
 msgstr "Reacties"
 
-#: includes/post.php:224
-#: templates/archive-orbis_deal.php:31
+#: includes/post.php:224 templates/archive-orbis_deal.php:31
 msgid "Date"
 msgstr "Datum"
 
-#: includes/rest.php:30
-#: includes/rest.php:48
+#: includes/rest.php:30 includes/rest.php:48
 msgid "Deal post ID."
 msgstr "Deal post ID."
 
@@ -302,7 +275,7 @@ msgstr "Beschrijving."
 
 #: includes/rest.php:68
 msgid "Link."
-msgstr ""
+msgstr "Link."
 
 #: includes/rest.php:74
 msgid "Amount."
@@ -316,8 +289,7 @@ msgstr "Herhaling."
 msgid "Actions"
 msgstr "Acties"
 
-#: templates/deal-details.php:34
-#: templates/deal-details.php:36
+#: templates/deal-details.php:34 templates/deal-details.php:36
 msgid "Agreement Form"
 msgstr "Akkoordformulier"
 
