@@ -21,12 +21,12 @@ class Orbis_Deals_Plugin extends Orbis_Plugin {
 	public function p2p_init() {
 		p2p_register_connection_type(
 			array(
-				'name'        => 'orbis_deals_to_companies',
+				'name'        => 'orbis_deals_to_organizations',
 				'from'        => 'orbis_deal',
-				'to'          => 'orbis_company',
+				'to'          => 'orbis_organization',
 				'sortable'    => 'to',
 				'title'       => array(
-					'from' => __( 'Companies', 'orbis-deals' ),
+					'from' => __( 'Organizations', 'orbis-deals' ),
 					'to'   => __( 'Deals', 'orbis-deals' ),
 				),
 				'from_labels' => array(
@@ -38,12 +38,12 @@ class Orbis_Deals_Plugin extends Orbis_Plugin {
 					'add_new_item'  => __( 'Add New Deal', 'orbis-deals' ),
 				),
 				'to_labels'   => array(
-					'singular_name' => __( 'Company', 'orbis-deals' ),
-					'search_items'  => __( 'Search company', 'orbis-deals' ),
-					'not_found'     => __( 'No companies found.', 'orbis-deals' ),
-					'create'        => __( 'Add Company', 'orbis-deals' ),
-					'new_item'      => __( 'New Company', 'orbis-deals' ),
-					'add_new_item'  => __( 'Add New Company', 'orbis-deals' ),
+					'singular_name' => __( 'Organization', 'orbis-deals' ),
+					'search_items'  => __( 'Search organization', 'orbis-deals' ),
+					'not_found'     => __( 'No organizations found.', 'orbis-deals' ),
+					'create'        => __( 'Add Organization', 'orbis-deals' ),
+					'new_item'      => __( 'New Organization', 'orbis-deals' ),
+					'add_new_item'  => __( 'Add New Organization', 'orbis-deals' ),
 				),
 			) 
 		);

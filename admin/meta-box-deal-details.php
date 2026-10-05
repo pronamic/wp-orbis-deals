@@ -4,22 +4,22 @@ global $wpdb, $post;
 
 wp_nonce_field( 'orbis_save_deal_details', 'orbis_deal_details_meta_box_nonce' );
 
-$company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
-$price      = get_post_meta( $post->ID, '_orbis_deal_price', true );
-$status     = get_post_meta( $post->ID, '_orbis_deal_status', true );
+$organization_id = get_post_meta( $post->ID, '_orbis_deal_organization_id', true );
+$price           = get_post_meta( $post->ID, '_orbis_deal_price', true );
+$status          = get_post_meta( $post->ID, '_orbis_deal_status', true );
 
-$company = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM $wpdb->orbis_companies WHERE id=%s", $company_id ) );
+$organization = $wpdb->get_var( $wpdb->prepare( 'SELECT name FROM %i WHERE id = %d', $wpdb->prefix . 'orbis_organizations', $organization_id ) );
 
 ?>
 <table class="form-table">
 	<tr valign="top">
 		<th scope="row">
-			<label for="orbis_deal_company"><?php esc_html_e( 'Company ID', 'orbis-deals' ); ?></label>
+			<label for="orbis_deal_organization"><?php esc_html_e( 'Organization ID', 'orbis-deals' ); ?></label>
 		</th>
 		<td>
-			<select id="orbis_deal_company" name="_orbis_deal_company_id" class="orbis-id-control orbis_company_id_field regular-text">
-				<option id="orbis_select2_default" value="<?php echo esc_attr( $company_id ); ?>">
-					<?php echo esc_attr( $company ); ?>
+			<select id="orbis_deal_organization" name="_orbis_deal_organization_id" class="orbis-id-control orbis-organization-id-control regular-text">
+				<option id="orbis_select2_default" value="<?php echo esc_attr( $organization_id ); ?>">
+					<?php echo esc_html( $organization ); ?>
 				</option>
 			</select>
 		</td>

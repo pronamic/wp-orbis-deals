@@ -86,13 +86,13 @@ function orbis_save_deal_details( $post_id, $post ) {
 
 	// OK
 	$definition = array(
-		'_orbis_deal_company_id' => FILTER_SANITIZE_STRING,
-		'_orbis_deal_price'      => array(
+		'_orbis_deal_organization_id' => FILTER_SANITIZE_STRING,
+		'_orbis_deal_price'           => array(
 			'filter'  => FILTER_VALIDATE_FLOAT,
 			'flags'   => FILTER_FLAG_ALLOW_THOUSAND,
 			'options' => array( 'decimal' => ',' ),
 		),
-		'_orbis_deal_status'     => FILTER_SANITIZE_STRING,
+		'_orbis_deal_status'          => FILTER_SANITIZE_STRING,
 	);
 
 	$data = filter_input_array( INPUT_POST, $definition );
@@ -214,14 +214,14 @@ add_action( 'orbis_deal_status_update', 'orbis_deal_status_update', 10, 3 );
  */
 function orbis_deal_edit_columns( $columns ) {
 	return array(
-		'cb'                 => '<input type="checkbox" />',
-		'title'              => __( 'Title', 'orbis-deals' ),
-		'orbis_deal_company' => __( 'Company', 'orbis-deals' ),
-		'orbis_deal_price'   => __( 'Price', 'orbis-deals' ),
-		'orbis_deal_status'  => __( 'Status', 'orbis-deals' ),
-		'author'             => __( 'Author', 'orbis-deals' ),
-		'comments'           => __( 'Comments', 'orbis-deals' ),
-		'date'               => __( 'Date', 'orbis-deals' ),
+		'cb'                      => '<input type="checkbox" />',
+		'title'                   => __( 'Title', 'orbis-deals' ),
+		'orbis_deal_organization' => __( 'Organization', 'orbis-deals' ),
+		'orbis_deal_price'        => __( 'Price', 'orbis-deals' ),
+		'orbis_deal_status'       => __( 'Status', 'orbis-deals' ),
+		'author'                  => __( 'Author', 'orbis-deals' ),
+		'comments'                => __( 'Comments', 'orbis-deals' ),
+		'date'                    => __( 'Date', 'orbis-deals' ),
 	);
 }
 
@@ -235,8 +235,8 @@ add_filter( 'manage_orbis_deal_posts_columns', 'orbis_deal_edit_columns' );
  */
 function orbis_deal_column( $column, $post_id ) {
 	switch ( $column ) {
-		case 'orbis_deal_company':
-			orbis_deal_the_company_name();
+		case 'orbis_deal_organization':
+			orbis_deal_the_organization_name();
 
 			break;
 		case 'orbis_deal_price':

@@ -2,12 +2,12 @@
 
 global $wpdb, $post, $wp_query;
 
-$company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
+$organization_id = get_post_meta( $post->ID, '_orbis_deal_organization_id', true );
 
-$company_post_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->orbis_companies WHERE id = %d;", $company_id ) );
+$organization_post_id = $wpdb->get_var( $wpdb->prepare( 'SELECT post_id FROM %i WHERE id = %d;', $wpdb->prefix . 'orbis_organizations', $organization_id ) );
 
 if ( function_exists( 'p2p_type' ) ) {
-	p2p_type( 'orbis_deals_to_companies' )->each_connected( $wp_query, array(), 'companies' );
+	p2p_type( 'orbis_deals_to_organizations' )->each_connected( $wp_query, array(), 'organizations' );
 	p2p_type( 'orbis_deals_to_persons' )->each_connected( $wp_query, array(), 'persons' );
 }
 
@@ -26,9 +26,9 @@ $url_agreement_form = add_query_arg(
 	<div class="card-body">
 		<div class="content">
 			<dl>
-				<dt><?php esc_html_e( 'Company', 'orbis-deals' ); ?></dt>
+				<dt><?php esc_html_e( 'Organization', 'orbis-deals' ); ?></dt>
 				<dd>
-					<a href="<?php echo \esc_url( get_permalink( $company_post_id ) ); ?>"><?php orbis_deal_the_company_name(); ?></a>
+					<a href="<?php echo \esc_url( get_permalink( $organization_post_id ) ); ?>"><?php orbis_deal_the_organization_name(); ?></a>
 				</dd>
 
 				<dt><?php esc_html_e( 'Agreement Form', 'orbis-deals' ); ?></dt>
@@ -50,17 +50,17 @@ $url_agreement_form = add_query_arg(
 	</div>
 </div>
 
-<?php if ( isset( $post->companies ) ) : ?>
+<?php if ( isset( $post->organizations ) ) : ?>
 
 	<div class="card mb-3">
-		<div class="card-header"><?php esc_html_e( 'Companies', 'orbis-deals' ); ?></div>
+		<div class="card-header"><?php esc_html_e( 'Organizations', 'orbis-deals' ); ?></div>
 
 		<ul class="list">
 
-			<?php foreach ( $post->companies as $company ) : ?>
+			<?php foreach ( $post->organizations as $organization ) : ?>
 
 				<li>
-					<a href="<?php echo esc_url( get_permalink( $company ) ); ?>"><?php echo esc_html( get_the_title( $company ) ); ?></a>
+					<a href="<?php echo esc_url( get_permalink( $organization ) ); ?>"><?php echo esc_html( get_the_title( $organization ) ); ?></a>
 				</li>
 
 			<?php endforeach; ?>

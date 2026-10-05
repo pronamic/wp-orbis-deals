@@ -11,18 +11,33 @@
         }
     },
     "require-dev": {
-        "pronamic/pronamic-cli": "^1.0",
+        "deployer/deployer": "^7.5",
         "pronamic/wp-coding-standards": "^2.0",
-        "wp-cli/wp-cli": "dev-main",
-        "wp-cli/wp-cli-bundle": "dev-main"
+        "wp-cli/dist-archive-command": "*",
+        "wp-cli/wp-cli-bundle": "*"
     },
     "scripts": {
-        "build": "vendor/bin/pronamic wp-build",
-        "translate": [
-            "@build",
-            "rsync --recursive --delete --verbose ./build/project/languages/ ./languages/"  
+        "build": [
+            "rm -rf ./build/stage-1",
+            "rsync --recursive --verbose --exclude-from=.distignore --exclude=/vendor/ ./ ./build/stage-1/",
+            "composer install --no-dev --prefer-dist --optimize-autoloader --working-dir=./build/stage-1/",
+            "rsync --recursive --delete --delete-excluded --verbose --exclude-from=.distignore ./build/stage-1/ ./build/orbis-deals/",
+            "vendor/bin/wp i18n make-pot ./build/orbis-deals/ --slug=orbis-deals",
+            "vendor/bin/wp i18n make-mo ./build/orbis-deals/languages/",
+            "vendor/bin/wp dist-archive ./build/orbis-deals/ --plugin-dirname=orbis-deals --force"
         ],
-        "version": "@build"
+        "deploy": [
+            "Composer\\Config::disableProcessTimeout",
+            "DEPLOYER_IMPORT=${DEPLOYER_IMPORT:-$HOME/deployer-orbis.php} vendor/bin/dep deploy"
+        ],
+        "dist-archive": "wp dist-archive . --plugin-dirname=orbis-deals",
+        "make-pot": [
+            "@build",
+            "rsync --recursive --delete --verbose ./build/orbis-deals/languages/ ./languages/",
+            "vendor/bin/wp i18n update-po ./languages/orbis-deals.pot"
+        ],
+        "phpcs": "vendor/bin/phpcs",
+        "phpcbf": "vendor/bin/phpcbf"
     },
     "require": {
         "automattic/jetpack-autoloader": "^3.0"

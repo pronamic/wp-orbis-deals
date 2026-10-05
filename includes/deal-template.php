@@ -3,26 +3,26 @@
 use Pronamic\WordPress\Money\Money;
 
 /**
- * Return the company name.
+ * Return the organization name.
  *
- * @return null|string $company_name
+ * @return null|string $organization_name
  */
-function orbis_deal_get_the_company_name() {
+function orbis_deal_get_the_organization_name() {
 	global $post;
 	global $wpdb;
 
-	$company_id = get_post_meta( $post->ID, '_orbis_deal_company_id', true );
+	$organization_id = get_post_meta( $post->ID, '_orbis_deal_organization_id', true );
 
-	$name = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM $wpdb->orbis_companies WHERE id = %d;", $company_id ) );
+	$name = $wpdb->get_var( $wpdb->prepare( 'SELECT name FROM %i WHERE id = %d;', $wpdb->prefix . 'orbis_organizations', $organization_id ) );
 
 	return $name;
 }
 
 /**
- * Echo the company name.
+ * Echo the organization name.
  */
-function orbis_deal_the_company_name() {
-	echo esc_html( orbis_deal_get_the_company_name() );
+function orbis_deal_the_organization_name() {
+	echo esc_html( orbis_deal_get_the_organization_name() );
 }
 
 /**

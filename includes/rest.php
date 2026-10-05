@@ -114,18 +114,18 @@ class Orbis_Deals_RestController {
 			'invoice_email' => '',
 		];
 
-		// Companies.
-		$companies = \get_posts(
+		// Organizations.
+		$organizations = \get_posts(
 			[
-				'post_type'        => 'orbis_company',
-				'connected_type'   => 'orbis_deals_to_companies',
+				'post_type'        => 'orbis_organization',
+				'connected_type'   => 'orbis_deals_to_organizations',
 				'connected_items'  => $post_id,
 				'posts_per_page'   => 1,
 				'suppress_filters' => false,
 			]
 		);
 
-		$company = \reset( $companies );
+		$organization = \reset( $organizations );
 
 		// Persons.
 		$persons = \get_posts(
@@ -141,14 +141,14 @@ class Orbis_Deals_RestController {
 		$person = \reset( $persons );
 
 		// Data.
-		if ( false !== $company ) {
-			$customer['company_name']  = get_the_title( $company );
-			$customer['kvk_number']    = get_post_meta( $company->ID, '_orbis_kvk_number', true );
-			$customer['vat_number']    = get_post_meta( $company->ID, '_orbis_vat_number', true );
-			$customer['address']       = get_post_meta( $company->ID, '_orbis_address', true );
-			$customer['postal_code']   = get_post_meta( $company->ID, '_orbis_postcode', true );
-			$customer['city']          = get_post_meta( $company->ID, '_orbis_city', true );
-			$customer['invoice_email'] = get_post_meta( $company->ID, '_orbis_invoice_email', true );
+		if ( false !== $organization ) {
+			$customer['company_name']  = get_the_title( $organization );
+			$customer['kvk_number']    = get_post_meta( $organization->ID, '_orbis_kvk_number', true );
+			$customer['vat_number']    = get_post_meta( $organization->ID, '_orbis_vat_number', true );
+			$customer['address']       = get_post_meta( $organization->ID, '_orbis_address', true );
+			$customer['postal_code']   = get_post_meta( $organization->ID, '_orbis_postcode', true );
+			$customer['city']          = get_post_meta( $organization->ID, '_orbis_city', true );
+			$customer['invoice_email'] = get_post_meta( $organization->ID, '_orbis_invoice_email', true );
 		}
 
 		if ( false !== $person ) {
